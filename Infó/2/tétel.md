@@ -1,0 +1,1 @@
+## Lexikális egységek. Adattípusok. Nevesített konstans. Változó. Kifejezések. Utasítások.Programegységek. Paraméterkiértékelés, paraméterátadás. Blokk. Hatáskörkezelés, láthatóság. Absztrakt adattípus. Kivételkezelés.
