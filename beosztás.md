@@ -10,10 +10,10 @@
 <tr> <td> Matek-6 <td> -
 <tr> <td> Matek-7 <td> -
 <tr> <td> Matek-8 <td> Hódi Zsuzsa
-<tr> <td> Info-1 <td> -
+<tr> <td> Info-1 <td> Cornea Attila
 <tr> <td> Info-2 <td> Varga Attila  
 <tr> <td> Info-3 <td> Varga Attila
-<tr> <td> Info-4 <td> -
+<tr> <td> Info-4 <td> Cornea Attila
 <tr> <td> Info-5 <td> Vámosi Patrik
 <tr> <td> Info-6 <td> -
 <tr> <td> Info-7 <td> Katona Márk
