@@ -17,6 +17,6 @@
 <tr> <td> Info-5 <td> Vámosi Patrik
 <tr> <td> Info-6 <td> -
 <tr> <td> Info-7 <td> Katona Márk
-<tr> <td> Info-8 <td> -
+<tr> <td> Info-8 <td> Katona Márk
 
 </table>
