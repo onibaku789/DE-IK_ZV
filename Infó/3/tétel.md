@@ -20,10 +20,10 @@
 -   **A bezárási eszközrendszer:**
 Az absztrakt adattípus az attribútumainak és metódusainak láthatóságát szabályozhatja, ezt valósítja meg a bezárási eszközrendszer. Általában 3 szintű bezárás van, mezők és metódusok esetében:
 
-- Fajtái:
-   - **Public:** minden osztály számára látható
-  - **Private:** az osztályon kívülről nem látható. Az eszközöket csak az adott osztály láthatja.
-  - **Protected:** az osztályon kívülről nem látható, private-ként viselkedik. Az osztályon belül és annak leszármazottjai számára látható.
+    - Fajtái:
+        - **Public:** minden osztály számára látható
+        - **Private:** az osztályon kívülről nem látható. Az eszközöket csak az adott osztály láthatja.
+         - **Protected:** az osztályon kívülről nem látható, private-ként viselkedik. Az osztályon belül és annak leszármazottjai számára látható.
 -   **Absztraktosztályok és interfészek:** Mindkettő absztrakciót használ, elrejtik a belső megvalósítást.
     - java
         -  **Interfészek:** Az interfész egy teljesen absztrakt osztály, minden függvénye absztrakt és publikus. Az összes változója konstans, publikus és konstans. Nem tartalmazhatnak megvalósítást, csak metódus prototípusokat. Egy interfész több interfészt is kiterjeszthet, de normális, absztrakt osztályokat nem. Implements kulcsszó.
