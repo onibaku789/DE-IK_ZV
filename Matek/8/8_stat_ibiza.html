@@ -1,0 +1,1280 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 6.0.7.3 (Linux)"/>
+	<meta name="created" content="2020-02-19T08:10:51.227587825"/>
+	<meta name="changed" content="2020-05-01T14:48:57.225461665"/>
+	<style type="text/css">
+		@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; line-height: 115% }
+		h2.western { font-family: "Liberation Sans", sans-serif; font-size: 16pt }
+		h2.cjk { font-family: "Noto Sans CJK SC"; font-size: 16pt }
+		h2.ctl { font-family: "Lohit Devanagari"; font-size: 16pt }
+		h1 { margin-bottom: 0.21cm }
+		h1.western { font-family: "Liberation Sans", sans-serif; font-size: 18pt }
+		h1.cjk { font-family: "Noto Sans CJK SC"; font-size: 18pt }
+		h1.ctl { font-family: "Lohit Devanagari"; font-size: 18pt }
+		h3.cjk { font-family: "Noto Sans CJK SC" }
+		h3.ctl { font-family: "Lohit Devanagari" }
+		h4.cjk { font-family: "Noto Sans CJK SC" }
+		h4.ctl { font-family: "Lohit Devanagari" }
+		a:link { so-language: zxx }
+	</style>
+</head>
+<body lang="hu-HU" dir="ltr">
+<h1 class="western" align="center">8.</h1>
+<h2 class="western">Statisztikai minta és becslések, átlag és
+szórás. Konfidenciaintervallumok. Az u-próba.</h2>
+<p><u>A statisztikai minta fogalma</u></p>
+<p>Definíció: Valamely valószínűségi változóra vonatkozó
+véges számú független kísérlet vagy megfigyelés eredménye:
+véges sok azonos eloszlású valószínűségi változó.</p>
+<p>Jelölés: Tekintsük a valószínűségi változót, ekkor a X-re
+vonatkozó n elemű minta</p>
+<p>X<sub>1</sub>, X<sub>2</sub>,....., X <sub>n</sub></p>
+<p>Az n számú kísérlet elvégzése során a i mintaelem egy-egy
+konkrét számértéket vesz fel:</p>
+<p>X<sub>1</sub> = x<sub>1</sub>, X<sub>2</sub> = x<sub>2</sub> ,...,
+X<sub>n</sub> = x<sub>n</sub></p>
+<p><strong>(elméleti vs tényleges)</strong></p>
+<p><strong>A statisztikai minta reprezentatív</strong>: a
+mintaelemek eloszlása megegyezik a vizsgált valószínűségi
+változó eloszlásával, hiszen mindegyik kísérletnél magát a
+valószínűségi változót figyeljük meg.</p>
+<p>A statisztikai minta elemei független valószínűségi változók,
+mivel a kísérleteket egymástól függetlenül végezzük.</p>
+<p>A mintaelemekből tapasztalati jellemzőket, ún. <strong>statisztikát</strong>
+konstruálunk.</p>
+<p>A statisztika a mintaelemek valamely függvénye. A statisztika
+tehát maga is valószínűségi változó és eloszlásának
+meghatározása fontos feladat. 
+</p>
+<p>A várható érték az eloszlás súlypontjáról, a szórás a
+változó értékeinek szétszórtságáról ad felvilágosítást.
+Ezekre az elméleti jellemzőkre a mintaelemekből igyekszünk
+következtetni úgy, hogy az X<sub>1</sub>, X<sub>2</sub>, ...,X<sub>n</sub>
+mintából különböző függvényeket képezünk. Valamely függvény
+minden konkrét minta esetén egyetlen számadatba tömöríti a
+mintaelemekben rejlő információt. 
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><strong><b>Mintaközép</b></strong><b> </b><b>(átlag)</b></p>
+<p><img src="8_stat_ibiza_html_1a8cecb56c154bc3.png" name="Image1" align="bottom" width="149" height="40" border="0"/>
+
+</p>
+<p><strong>Tétel:</strong> 
+</p>
+<p>Ha a valószínűségi változó várható értéke μ, szórása
+σ, akkor a mintaközépre</p>
+<p><img src="8_stat_ibiza_html_7ec2e1f65dc38ee2.png" name="Image2" align="bottom" width="55" height="23" border="0"/>
+
+<img src="8_stat_ibiza_html_aae51077a6cf823b.png" name="Image3" align="bottom" width="71" height="43" border="0"/>
+
+</p>
+<p><strong>Rendezett minta:</strong> 
+</p>
+<p>A véletlen, az észlelés sorrendjében kapott mintaelemeket
+rendezzük nagyság szerint. Jelölje a nagyság szerint a
+legkisebbet <sub>
+<img src="8_stat_ibiza_html_c96287ee52c0a7a6.png" name="Image4" align="bottom" width="24" height="25" border="0"/>
+</sub>,
+a megmaradók közül a legkisebbet <sub>
+<img src="8_stat_ibiza_html_35ff2595a375818d.png" name="Image5" align="bottom" width="24" height="25" border="0"/>
+</sub>
+, stb.</p>
+<p>Ekkor</p>
+<p><img src="8_stat_ibiza_html_a074a71f68249412.png" name="Image6" align="bottom" width="121" height="32" border="0"/>
+
+</p>
+<p>A rendezett mintaelemek már nem függetlenek és nem is azonos
+eloszlásúak.</p>
+<p><strong>Mintaterjedelem:</strong> 
+</p>
+<p><img src="8_stat_ibiza_html_b55ad16ab1dd93b6.png" name="Image7" align="bottom" width="92" height="25" border="0"/>
+
+</p>
+<p><strong>Medián:</strong> 
+</p>
+<p>Ha a mintanagyság páratlan, akkor a középső mintaelem a
+medián - páros mintanagyság esetén a két középső átlaga.</p>
+<p><strong>Tapasztalati (empirikus) szórásnégyzet:</strong> 
+</p>
+<p>A mintaközéptől vett eltérések négyzetének átlaga:</p>
+<p><img src="8_stat_ibiza_html_407fe20625a6fa90.png" name="Image8" align="bottom" width="320" height="80" border="0"/>
+
+</p>
+<p><strong>Korrigált tapasztalati szórásnégyzet:</strong> 
+</p>
+<p><img src="8_stat_ibiza_html_aeb7326fd63627dc.png" name="Image9" align="bottom" width="204" height="80" border="0"/>
+
+</p>
+<p><strong>Variációs tényező (relatív szórás):</strong> 
+</p>
+<p><img src="8_stat_ibiza_html_3abe0e10d1fbc1cb.png" name="Image10" align="bottom" width="55" height="44" border="0"/>
+
+</p>
+<h2 class="western">A statisztikai becslések jellemzői</h2>
+<p><strong>Torzítatlan becslés:</strong> 
+</p>
+<p>Ha a valószínűségi változó elméleti jellemzője az a
+paraméter, és az <sub>
+<img src="8_stat_ibiza_html_4b4311a56c3fa265.png" name="Image14" align="bottom" width="109" height="21" border="0"/>
+</sub>
+statisztikai mintából kívánjuk becsülni, akkor elvárjuk, hogy
+az <sub>
+<img src="8_stat_ibiza_html_82e1c429e036186b.png" name="Image15" align="bottom" width="21" height="24" border="0"/>
+</sub>
+statisztika értékei az 'a' szám körül ingadozzanak.</p>
+<p><img src="8_stat_ibiza_html_b6f1cdeb93cad7e8.png" name="Image16" align="bottom" width="152" height="21" border="0"/>
+
+</p>
+<p><strong>Konzisztens becslés</strong>:</p>
+<p>A minta elemszámának növelésével az <sub>
+<img src="8_stat_ibiza_html_82e1c429e036186b.png" name="Image17" align="bottom" width="21" height="24" border="0"/>
+</sub>
+statisztika egyre jobban közelítse meg az 'a' paramétert.</p>
+<p><strong>Elégséges becslés</strong>:</p>
+<p>Az 
+<img src="8_stat_ibiza_html_82e1c429e036186b.png" name="Image18" align="bottom" width="21" height="24" border="0"/>
+
+statisztika tartalmazza az 'a' paraméterre vonatkozó összes
+információt.</p>
+<p><strong>Efficiens becslés</strong>:</p>
+<p>A legkisebb szórású torzítatlan becslés.</p>
+<p> <b>Konfidenciaintervallum:</b></p>
+<p style="font-weight: normal">Olyan intervallum, amely a paramétert
+lefedi bizonyos valószínűséggel. Az intervallum végpontjai
+függnek a véletlentől, a paraméter pedig egy ismeretlen konstans.</p>
+<p><span style="font-weight: normal">Az ismeretlen m várhat</span><span style="font-weight: normal">ó</span><span style="font-weight: normal">
+értékre adunk meg egy intervallumot, amely végpontjai a
+mintaelemek függvényei lesznek és adott (1-</span>Ɛ)
+valószínűséggel lefedi az ismeretlen valószínűséget.</p>
+<p>Ez 
+<img src="8_stat_ibiza_html_4877b026f183bf2a.png" name="Image11" align="bottom" width="12" height="18" border="0"/>
+-ra
+szimmetrikus, hiszen az „T1” alsó és „T2” felső érték az
+alábbi módon számítható ki a várható értékre normális
+eloszlás és ismert szórás esetén:</p>
+<p><img src="8_stat_ibiza_html_98eb8352c41e2184.png" name="Image12" align="bottom" width="249" height="74" border="0"/>
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p>Itt az u értékét táblázatból kereshetjük ki, konstans, a
+szórás és a minták száma ismert. (kszi görög betű és x
+ugyanazt jelölik, forrástól függenek)</p>
+<p>Ekkor annak a valószínűsége, hogy az ismeretlen az [a, b]
+intervallumba esik, 1- Ɛ.</p>
+<p>Pl:  Ɛ=0.05</p>
+<p>u<sub>Ɛ</sub> értékét keressük táblázatból: <font face="Liberation Serif, serif">Φ(</font><font face="Liberation Serif, serif">u</font><sub><font face="Liberation Serif, serif">Ɛ</font></sub><font face="Liberation Serif, serif">)=1-(
+Ɛ/2) = 0.975, tehát  </font><font face="Liberation Serif, serif">u</font><sub><font face="Liberation Serif, serif">Ɛ</font></sub><font face="Liberation Serif, serif">=1.96</font></p>
+<p><font face="Liberation Serif, serif">Tehát a mintából ismert
+átlagot az elolszlásból ismert szórást és a mintavételek
+számát kell behelyettesíteni a képletbe:</font></p>
+<p><font face="Liberation Serif, serif">T1 =
+átlag-1.96*szórás/</font><font face="Liberation Serif, serif">√</font><font face="Liberation Serif, serif">mintavételek
+száma T2 = </font><font face="Liberation Serif, serif">
+átlag</font><font face="Liberation Serif, serif">+</font><font face="Liberation Serif, serif">1.96*szórás/</font><font face="Liberation Serif, serif">√</font><font face="Liberation Serif, serif">mintavételek
+száma</font></p>
+<p><br/>
+<br/>
+
+</p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Stat</font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">isztikai
+próbák: Legyen teta egy ismeretlen paraméter, és</font></font><font face="serif"><font size="4" style="font-size: 13pt">
+</font></font>
+</p>
+<p>H0: teta=teta0 nullhipotézis. Itt teta0 egy adott szám (előírás,
+szabvány, érték stb., amely kedvező számunkra, az a jó, ha ezt
+elérjük). Teta nem ismert. H0 egyszerű hipotézis, és 1 teta0
+érték van. 
+</p>
+<p>H1: teta!= teta0 ellenhipotézis, vagy alternatív hipotézis, ez
+általában számunkra kedvezőtlen eset. Összetett hipotézis, mert
+több érték jön számításba:</p>
+<p>H1: 	 teta != teta0 kétoldali</p>
+<p>	 teta &lt; teta0 egyoldali (pl: vásárló esetén a csoki súlya
+&lt;100g rossz)</p>
+<p><font face="serif"><font size="4" style="font-size: 13pt">	 </font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">teta
+&gt; teta0 egyoldali (pl: eladó esetén a kínált áru súlya </font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">&gt;
+10kg rossz)</font></font></p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p>Döntéshozás:</p>
+<p>			H0 igaz		H0 hamis</p>
+<p>H0 elfogadva		helyes döntés		másodfajú hiba</p>
+<p>H0 elvetve		elsőfajú hiba		helyes döntés</p>
+<p><br/>
+<br/>
+
+</p>
+<p>Mindkét hibát minimalizálni kellene, de nem lehetséges.
+Általában ha az egyik hibát csökkentem, a másik nőni fog. Ezért
+rögzítünk egy alfa&gt;0 kicsi számot (pl 0.01)</p>
+<p>Pl: H0: jó az autó, amit meg akarok venni</p>
+<p>1.ránézek, azt hiszem, hogy jó és nem veszem meg: 1.fajú hiba</p>
+<p>2. rossz az autó, és mégis megveszem: 2.fajú hiba</p>
+<p>Rögzített elsőfajú hiba esetén keressük azt a
+próbát/tesztet, amely a 2.fajú hibát minimalizálja. Ezt a
+rögzített hibát szokás szabványba foglalni.</p>
+<p><b>U-próba: </b>
+</p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">A
+legegyszerűbb próba az u-próba. Legyen  X</font><font size="1" style="font-size: 8pt">1</font><font size="3" style="font-size: 12pt">,...,X</font><font size="1" style="font-size: 8pt">n
+</font><font size="3" style="font-size: 12pt">minta N(0,1)
+eloszlásból. Tegyük fel, hogy σ</font><font size="1" style="font-size: 8pt">2
+</font><font size="3" style="font-size: 12pt">ismert. Az m várható
+értékre az előírás m</font><font size="1" style="font-size: 8pt">0</font><font size="3" style="font-size: 12pt">.
+Tehát a H</font><font size="1" style="font-size: 8pt">0</font><font size="3" style="font-size: 12pt">:m=m</font><font size="1" style="font-size: 8pt">0
+</font><font size="3" style="font-size: 12pt">nullhipotézist kell
+vizsgálnunk a H</font><font size="1" style="font-size: 8pt">1</font><font size="3" style="font-size: 12pt">:m
+!=m</font><font size="1" style="font-size: 8pt">0 </font><font size="3" style="font-size: 12pt">altenatív
+hipotézissel (ellenhipotézissel) szemben.H</font><font size="1" style="font-size: 8pt">0
+</font><font size="3" style="font-size: 12pt">fennállása esetén az
+</font>u statisztika normális eloszlású lesz: </font>
+</p>
+<p><img src="8_stat_ibiza_html_5d67a7d453291d1c.png" name="Image13" align="bottom" width="150" height="52" border="0"/>
+</p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Tehát
+ha H</font><font size="1" style="font-size: 8pt">0 </font><font size="3" style="font-size: 12pt">igaz,
+akkor u nagy valószínűséggel beleesik egy [</font>−<font size="3" style="font-size: 12pt">u</font><font size="1" style="font-size: 8pt">α/2</font><font size="3" style="font-size: 12pt">,u</font><font size="1" style="font-size: 8pt">α/2</font><font size="3" style="font-size: 12pt">]
+intervallumba. Ha ez nem áll, akkor az H</font><font size="1" style="font-size: 8pt">1
+</font><font size="3" style="font-size: 12pt">teljesülésére utal. </font></font>
+</p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Tehát
+a döntési eljárás a következő. Adott α értékhez
+meghatározzuk azt az u</font><font size="1" style="font-size: 8pt">α/2
+</font><font size="3" style="font-size: 12pt">értéket, melyre </font></font>
+</p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">P(−u</font><font size="1" style="font-size: 8pt">α/2</font><font size="3" style="font-size: 12pt">≤N(0,1)≤u</font><font size="1" style="font-size: 8pt">α/2</font><font size="3" style="font-size: 12pt">)
+=α.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Α
+az elsőfajú hiba nagysága. Ha u ∈[−u</font><font size="1" style="font-size: 8pt">α/2</font><font size="3" style="font-size: 12pt">,u</font><font size="1" style="font-size: 8pt">α/2</font><font size="3" style="font-size: 12pt">],
+</font><font size="3" style="font-size: 12pt">tehát beleesik az
+elfogadási tartományba, </font><font size="3" style="font-size: 12pt">akkor
+H</font><font size="1" style="font-size: 8pt">0</font><font size="3" style="font-size: 12pt">-at
+1−α szinten (azaz(1−α)·100% szignifikancia szinten) </font><font size="3" style="font-size: 12pt">elfogadom</font><font size="3" style="font-size: 12pt">.
+</font><font size="3" style="font-size: 12pt">Ha nem esik ebbe a
+tartományba, akkor a kritikus tartományba esik, tehát </font><font size="3" style="font-size: 12pt">
+H</font><font size="1" style="font-size: 8pt">0</font><font size="3" style="font-size: 12pt">-at
+1−α szinten (azaz(1−α)·100% szignifikancia szinten) </font><font size="3" style="font-size: 12pt">elvetem.
+</font><font size="3" style="font-size: 12pt">Az α értékét 0.1,
+0.05, 0.01-nek szoktuk választani. </font></font>
+</p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Pl:
+100g csokit veszek. Tényleg 100g a súlya?</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">H0:
+m= 100g (itt m ismeretlen, 100g a feltételezésünk, mivel ez van
+ráírva)</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">H1:
+m != 100g</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">X:
+csoki súlya, EX(várható érték) elvileg 100g</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Megfigyelések:
+x1 = X1(omega)=99g, x2=101g, …, x16 = 98g</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">m0
+= 100g, n=16, </font><font size="3" style="font-size: 12pt">átlag =
+99.5, szigma = 1</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">u=(99.5-100)/(1/4)
+= 4*(-0.5) = -2</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">ha
+alfa = 0.1, akkor táblázatból 0.95 (=1-(alfa/2))-höz tartozó
+értéket kell kikeresni, ami 1.64. Tehát elfogadási tartomány:
+[-1.64, 1.64]. Mivel az u-statisztikánk értéke -2, ez kritikus
+tartományba esik, tehát H0-t 95% szignifikancia szinten elvetem.</font></font></p>
+<h3 class="western">Bővebben:</h3>
+<p><a href="https://regi.tankonyvtar.hu/hu/tartalom/tamop425/0027_MA3-6/ch01s05.html">https://regi.tankonyvtar.hu/hu/tartalom/tamop425/0027_MA3-6/ch01s05.html</a></p>
+<p><a href="https://gyires.inf.unideb.hu/KMITT/b21/valseg.pdf">https://gyires.inf.unideb.hu/KMITT/b21/valseg.pdf</a>
+121.oldal</p>
+<h2 class="western" style="page-break-before: always">Az informatikai
+biztonság fogalma, legfontosabb biztonsági célok. Fizikai, emberi,
+technikai fenyegetések és ellenük való védekezés. Algoritmikus
+védelem eszközei: titkosítás, digitális aláírás, hash
+függvények. Az AES és RSA algoritmusok.</h2>
+<p align="left"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><b>Az
+informatikai biztonság fogalma: </b></font></font>
+</p>
+<p align="left" style="font-weight: normal"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Az
+informatikai biztonság az informatikai rendszer olyan – az
+érintett számára kielégítő mértékű – állapota, amelyben
+annak védelme az informatikai rendszerben kezelt adatok
+bizalmassága, sértetlensége és rendelkezésre állása, valamint
+a rendszer elemeinek sértetlensége és rendelkezésre állása
+szempontjából zárt, teljes körű, folytonos és a kockázatokkal
+arányos.</font></font></p>
+<p align="left" style="margin-bottom: 0cm; font-style: normal; line-height: 100%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><b>Az
+adatvédelem céljai</b></font></font></font></p>
+<p align="left" style="margin-top: 0.28cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#ce181e"><font face="FreeSans, serif"><font size="7" style="font-size: 32pt"><span style="text-decoration: none"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-style: normal"><span style="font-weight: normal">elérhetőség
+ </span></span></font></font></span><span style="text-decoration: none"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-style: normal"><span style="font-weight: normal">(</span></span></font></font></span><span style="text-decoration: none"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-style: normal"><span style="font-weight: normal">azonosítás</span></span></font></font></span><span style="text-decoration: none"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-style: normal"><span style="font-weight: normal">sal):
+</span></span></font></font></span></font></font></font>
+</p>
+<p align="left" style="margin-top: 0.28cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="FreeSans, serif"><font size="7" style="font-size: 32pt"><font color="#000000"><span style="text-decoration: none"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-style: normal"><span style="font-weight: normal">A
+szolg</span></span></font></font></span></font><font color="#000000"><span style="text-decoration: none"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-style: normal"><span style="font-weight: normal">áltatás
+minél hosszabb ideig (bármikor) és minél több helyről
+(bárhonnan) elérhető legyen és a végrehajtás folyamata
+követhető legyen.</span></span></font></font></span></font></font></font></font></p>
+<p align="left" style="margin-top: 0.28cm; margin-bottom: 0cm; font-style: normal; line-height: 100%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font color="#000000"><span style="text-decoration: none">
+<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-style: normal"><span style="font-weight: normal">A
+hagyom</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">ányos
+szolgáltatás jellemzői:</span></span></span></font></font></font></font></p>
+<p align="left" style="margin-top: 0.28cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">meghatározott
+helye(ke)n vehető igénybe: iroda, ügyfélszolgálat.  </span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">A</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">
+munkaidő rögzített, személyes vagy meghatalmazott általi 
+megjelenés: jogosultság ellenőrzés.</span></span></span></font></font></font></font></p>
+<p align="left" style="margin-top: 0.28cm; margin-bottom: 0cm; font-style: normal; line-height: 100%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Az
+elektronikus szolg</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">áltatások
+időkorlátja a szerverek, tárolók és hálózat üzembiztonsága.</span></span></span></font></font></font></font></p>
+<p align="left" style="margin-top: 0.25cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 90%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Folyamatos
+üzemhez biztosítani kell:</font></font></font></p>
+<p align="left" style="margin-top: 0.21cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 90%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">a
+szerverfunkciót másik eszköz átvehesse: duplikálás. </span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">A</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">datbázis
+tükrözése: az adatokat több, független tárolón helyezzük el
+és ezek tartalmát folyamatosan frissítjük, </span></span></span></font><font color="#ff0066"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">szinkronizálás</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">,
+alternatív elérési útvonalak biztosítása a hálózaton,
+jogosultság ellenőrzés automatizálása(!).</span></span></span></font></font></font></font></p>
+<p align="left" style="margin-top: 0.28cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#ce181e"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">sértetlenség,
+hitelesség </span></span></span></font><font color="#ce181e"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">(</span></span></span></font><font color="#ce181e"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">digitális
+aláírás</span></span></span></font><font color="#ce181e"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">sal):</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">
+A dokumentumok k</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">észítése,
+feldolgozása  és felhasználása időben és térben elválik.</span></span></span></font></font></font></font></p>
+<p align="left" style="margin-top: 0.28cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Biztosítani
+kell, hogy bármikor és bárhol </span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">a</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">zonosítani
+lehessen a készítő(ke)t és  módosító(ka)t, </span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">a</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">
+hibás vagy illegális másolatot, változatot  fel kell ismerni.</span></span></span></font></font></font></font></p>
+<p align="left" style="margin-top: 0.28cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#ce181e"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">bizalmasság
+ </span></span></span></font><font color="#ce181e"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">(</span></span></span></font><font color="#ce181e"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">titkosítás</span></span></span></font><font color="#ce181e"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">sal):</span></span></span></font><font color="#ef2c27"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">
+</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Az
+inform</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">ációcsere
+és tárolás </span></span></span></font><font color="#ff0066"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">nyílt
+csatornán és szabványos eszközökkel</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">
+történik, de ezen néha bizalmas információt kell küldeni
+(jelszó, személyes-és vállalati titok, stb.) ezt az üzenetek
+kódolásával, titkosításával lehet elérni.</span></span></span></font></font></font></font></p>
+<h2 class="western" align="left"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><b>Fizikai,
+emberi, technikai fenyegetések és ellenük való védekezés</b></font></font></h2>
+<p align="left" style="margin-top: 0.28cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><b>Fizikai</b></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">
+: </span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Víz,
+tűz, sugárzás, elemi csapás, Lopás, Rongálás</span></span></span></font></font></font></font></p>
+<p align="left" style="margin-top: 0.21cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 90%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><b>Emberi</b></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">,
+social engeneering:  Tapasztalatlanság, Adatlopás – bennfentes,
+külső, Rendszergazda, Mérnök</span></span></span></font></font></font></font></p>
+<p align="left" style="margin-top: 0.21cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 90%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><b>Technikai</b></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">:
+ Hardverhiba, Szoftverhiba, Vírus, trójai, spam</span></span></span></font></font></font></font></p>
+<p align="left" style="margin-top: 0.18cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 90%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><b>Fizikai
+védelem</b></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">:
+Elhelyezés, Energia ellátás, Kábelezés elhelyezése, Sugárzás
+elleni védelem, Hardverhiba – ma már nem gyakori, Szoftver
+biztonsága – a felhasználók csak arra használhassák, amire
+jogosultságuk van. Nem kívánt szolgáltatások, weboldalak szűrése</span></span></span></font></font></font></font></p>
+<p style="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 90%"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><b>Emberi
+beavatkozás elleni védelem</b></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">:
+</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Felhasználó</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">(</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Szűk
+jogkör</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">)</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">,
+Üzemeltető </span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">(</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Beállítások
+végrehajtása, módosítása, Utasítások alapján dolgozik</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">),
+</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Mérnök
+</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">(</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Rendszer
+beállítása, módosítása, javítása, Széles hatáskör</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">),
+</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Programozó
+</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">(</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Rendszer
+készítése, Teljes hatáskör</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">)</span></span></span></font></font></font></p>
+<p align="left" style="margin-top: 0.18cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 90%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><b>További
+eszközök</b></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">:</span></span></span></font></font></font></font></p>
+<p align="left" style="margin-top: 0.18cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 90%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><u><span style="font-weight: normal">A</span></u></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><u><span style="font-weight: normal">z
+elektronikus aláírás</span></u></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">:
+elektronikusan aláírt elektronikus dokumentumhoz azonosítás
+céljából logikailag hozzárendelt vagy azzal elválaszthatatlanul
+összekapcsolt elektronikus adat.</span></span></span></font></font></font></font></p>
+<p align="left" style="margin-top: 0.18cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 90%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><u><span style="font-weight: normal">A
+fokozott biztonságú elektronikus aláírás</span></u></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">
+ezen kívül  </span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">„alkalmas
+az aláíró azonosítására,  egyedülállóan az aláíróhoz
+köthető,  olyan eszközökkel hozták létre, amelyek kizárólag
+az aláíró befolyása alatt állnak, és a dokumentum tartalmához
+olyan módon kapcsolódik, hogy minden – az aláírás elhelyezését
+követően a dokumentumban tett – módosítás érzékelhető.” </span></span></span></font></font></font></font>
+</p>
+<p align="left" style="margin-top: 0.25cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 80%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><u><span style="font-weight: normal">M</span></u></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><u><span style="font-weight: normal">inősített
+elektronikus aláírás:</span></u></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">
+olyan - fokozott biztonságú - elektronikus aláírás, amelyet az
+aláíró biztonságos aláírás-létrehozó eszközzel hozott
+létre, és amelynek hitelesítése céljából minősített
+tanúsítványt bocsátottak ki.</span></span></span></font></font></font></font></p>
+<p align="left" style="margin-top: 0.25cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 80%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><u>Hitelesítés
+szolgáltatók: </u></font></font></font>
+</p>
+<p align="left" style="margin-top: 0.18cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 90%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Indítása,
+</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Bejelentés
+a felügyelő hatóságnak, Általános szerződési feltételek,
+Bizonyítani a kérelmező és alkalmazottai büntetlen előéletét
+és szakképzettségét, Felelősségbiztosítással és megfelelő
+pénzügyi háttérrel kell rendelkeznie.</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">
+</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">J</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">ogosult
+a szolgáltatást igénybe vevő releváns adatait kezelni </span></span></span></font></font></font></font>
+</p>
+<p align="left" style="margin-top: 0.21cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 90%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000">„<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">a
+tanúsítványokkal kapcsolatos elektronikus információkat –
+beleértve az azok előállításával összefüggőeket is – és
+az ahhoz kapcsolódó személyes adatokat legalább a tanúsítvány
+érvényességének lejártától számított tíz évig, illetőleg
+az elektronikus aláírással, illetve az azzal aláírt elektronikus
+dokumentummal kapcsolatban felmerült jogvita jogerős lezárásáig
+megőrzi.” </font></font></font>
+</p>
+<p align="left" style="margin-top: 0.21cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 90%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">jogosult
+a szolgáltatást igénybe vevő releváns adatait kezelni </font></font></font>
+</p>
+<p align="left" style="margin-top: 0.18cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 90%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><u><span style="font-weight: normal">Ügyviteli
+védelem</span></u></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">:
+Az informatikai rendszert üzemeltető szervezet ügymenetébe
+épített </span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">védelmi
+intézkedések, biztonsági szabályok és tevékenységi formák
+együttese. </span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Részei:
+</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Informatikai
+Biztonsági Koncepció, Informatikai Biztonsági Szabályzat</span></span></span></font></font></font></font></p>
+<p align="left" style="margin-top: 0.18cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 90%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><u>Informatikai
+Biztonsági Koncepció</u></font></font></font></p>
+<p align="left" style="margin-top: 0.18cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 90%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Védelmi
+igény feltárása: </span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">lényeges
+informatikai rendszerek, informatikai alkalmazások</span></span></span></font></font></font></font></p>
+<p align="left" style="margin-top: 0.28cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Fenyegetettség
+elemzés: veszélyforrások feltárása, a rendszerek gyenge pontjai</font></font></font></p>
+<p align="left" style="margin-top: 0.18cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 90%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Kockázatelemzés:
+</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">károk
+hatása az informatikai rendszerekre és a szervezetre, várható
+bekövetkezési gyakoriság, kárérték</span></span></span></font></font></font></font></p>
+<p align="left" style="margin-top: 0.28cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 90%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Kockázat
+menedzselés: veszélyforrások elleni védekezés módjai
+(megelőzés), intézkedési tervek, felelősök kijelölése,
+időterv az intézkedések bevezetésére, intézkedések
+felülvizsgálatának ütemezése</font></font></font></p>
+<p align="left" style="margin-top: 0.18cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 90%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><u>Informatikai
+Biztonsági Szabályzat</u></font></font></font></p>
+<p align="left" style="margin-top: 0.18cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 90%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Biztonsági
+osztályba sorolás részleg szinten is.</font></font></font></p>
+<p align="left" style="margin-top: 0.21cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#333399"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Alapbiztonság</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">:
+általános információ feldolgozás (nyilvános és személyes
+adatok)</span></span></span></font></font></font></font></p>
+<p align="left" style="margin-top: 0.21cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#333399"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Fokozott
+biztonság</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">:
+szolgálati titok, átlagos mennyiségű különleges adat (bizalmas
+adatok)</span></span></span></font></font></font></font></p>
+<p align="left" style="margin-top: 0.21cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#333399"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Kiemelt
+biztonság</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">:
+államtitok, nagy mennyiségű különleges adat. (titkos adatok)</span></span></span></font></font></font></font></p>
+<p align="left" style="margin-top: 0.28cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Feladatkörök,
+felelősségi- és hatáskörök az informatikai biztonság
+területén.</font></font></font></p>
+<p align="left" style="margin-top: 0.18cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 90%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Védelmi
+intézkedések: </span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Hozzáférési
+jogosultságok meghatározása, Intézkedési terv az illetéktelen
+hozzáférés illetve a jogosultságokkal való visszaélés
+eseteire, Biztonsági eseménynapló, Automatikus naplózás, A
+rendszert csak illetékes vezető engedélyével szabad
+megváltoztatni, Külső személy a kezelt adatokhoz nem férhet
+hozzá, Jelszómenedzsment, Felhasználók listájának rendszeres
+aktualizálása, Ideiglenesen v. tartósan távol levő munkatárs
+helyettesítése, Külső partnerek hozzáférési jogosultsága
+(federation)</span></span></span></font></font></font></font></p>
+<p style="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 90%"><font color="#000000"><span style="text-decoration: none"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-style: normal"><b>spam
+ellen</b></span></font></font></span></font><font color="#000000"><span style="text-decoration: none"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-style: normal"><span style="font-weight: normal">:
+</span></span></font></font></span></font><font color="#000000"><span style="text-decoration: none"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-style: normal"><span style="font-weight: normal">olvasás
+nélküli törlés (fennáll a fontos levél törlésének esélye),
+a web oldalakon feltüntetett e-mail címek álcázása a begyűjtés
+ellen, spam azonosító program telepítése a felhasználó gépére,
+a nyitott mail-továbbító szerverek korlátozása, SPAM szűrő
+alkalmazása a levélkezelő felületen, kulcsszavak alapján való
+szűrés, öntanuló Bayes-szűrő használata, a küldő cégek jogi
+perlése http://hu.spam.wikia.com/wiki/Kezd%C5%91lap</span></span></font></font></span></font></p>
+<p style="margin-top: 0.18cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 90%; text-decoration: none">
+<br/>
+
+</p>
+<p style="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 90%"><font color="#000000"><span style="text-decoration: none"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-style: normal"><b>vírusok
+ellen</b></span></font></font></span></font><font color="#000000"><span style="text-decoration: none"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-style: normal"><span style="font-weight: normal">:
+</span></span></font></font></span></font><font color="#000000"><span style="text-decoration: none"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-style: normal"><span style="font-weight: normal">Nem
+szabad bizonytalan származású  szoftvert használni. Vírusírtó
+programok használata. Tűzfal alkalmazása. Rendszeres
+szoftverfrissítés.   Korábbi  verziók hibáit kihasználó
+rosszindulatú  programok nem fertőzhetnek.</span></span></font></font></span></font></p>
+<p style="margin-top: 0.18cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 90%; text-decoration: none">
+<br/>
+
+</p>
+<p align="left" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<h2 class="western" align="left"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><b>Algoritmikus
+védelem eszközei: titkosítás, digitális aláírás, hash
+függvények</b></font></font></h2>
+<h2 class="western" align="left"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><b>Titkosítás:</b></font></font></h2>
+<p align="left"><a name="d0e2549"></a><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">Az
+üzenetet szokás </span></font></font><em><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">nyílt
+szövegnek</span></font></font></em><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+(plain text) is nevezni. </span></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">Az</span></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+Adó az üzenetet nem az eredeti formájában küldi át a csatornán,
+hanem egy </span></font></font><em><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">titkosító
+eljárásnak (encryption)</span></font></font></em><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+veti alá. A csatornán tehát már nem a nyílt szöveg, hanem annak
+kódolt változata a titkos üzenet </span></font></font><em><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">(ciphertext)</span></font></font></em><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+megy át. Közvetlenül a Nyelő sem tud mit kezdeni a titkos
+üzenettel, de ismerve a megfejtő, </span></font></font><em><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">dekódoló
+eljárást</span></font></font></em><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+(decryption) vissza tudja állítani az eredeti szöveget és
+értelmezni tudja azt.</span></font></font></p>
+<p>Jelöljük a lehetséges üzenetek halmazát <em>P</em>-vel, a
+titkosított üzenetek halmazát pedig <em>C</em>-vel. Ekkor a
+titkosító eljárás egy <em>E: P --&gt; C</em>, visszafejtés pedig
+egy <em>D: C --&gt; P</em> leképezés. Bizonyos esetekben a
+titkosító és a visszafejtő eljárás nemcsak a nyílt üzenettől,
+hanem egy további paramétertől, kulcstól (key) is függ. Ha a
+lehetséges kulcsok halmazát K-val jelöljük, akkor a titkosító,
+illetve visszafejtő leképezések definíciója a következőképpen
+alakul: <em>E: P x K --&gt; C, D: C x K --&gt; P</em>, ahol most <em>x</em>
+halmazok direkt szorzatát jelöli.</p>
+<p>A titkosítás klasszikus alkalmazásainál arra törekedtek, hogy
+a kódoló eljárás és a kulcs is titokban maradjon. Ekkor persze
+az adónak és vevőnek a kommunikáció megkezdése előtt meg kell
+állapodnia a titkosító módszerben és a kulcsban. A
+kriptográfiában ma a titkosító és visszafejtő függvényt
+ismertnek, sőt szabványosnak tételezzük fel, így a titkosítás
+minősége a kulcstól függ. 
+</p>
+<p>Tetszőleges <em>u</em> üzenetre és <em>k</em> kulcsra, ha <em>m
+= E(u,k)</em>, akkor a Figyelő <em>E</em> és <em>m</em> ismeretében
+nagyon nehezen tudja <em>u</em>-t, esetleg <em>k</em>-t is
+meghatározni. 
+</p>
+<p>Egy titkosító függvény csak akkor használható a
+gyakorlatban, ha a kódolást gyorsan el tudja végezni. 
+</p>
+<p>A dekódolás azt jelenti, hogy vissza akarjuk állítani az
+eredeti üzenetet. Ehhez persze egy dekódoló kulcs is kell. A <em>D</em>
+függvénynek tehát olyannak kell lennie, hogy minden <em>k</em><em><sub>t</sub></em><em>
+</em>titkosító kulcshoz legyen egy <em>k</em><em><sub>d</sub></em><em>
+</em>visszafejtő kulcs úgy, hogy minden <em>u</em> üzenetre
+<em>D(E(u,k</em><em><sub>t</sub></em><em>),k</em><em><sub>d</sub></em><em>)
+= u</em>.</p>
+<p>Azaz, ha az u üzenetet a kt kulccsal titkosítjuk, majd a titkos
+üzenetet a kd visszafejtő kulccsal dekódoljuk, akkor visszakapjuk
+az eredeti üzenetet.</p>
+<p>A Figyelő <em>E</em>, <em>m</em> és <em>D</em> ismeretében
+nagyon nehezen tudja <em>u</em>-t, esetleg <em>k</em><em><sub>t</sub></em><em>
+</em>-t is meghatározni. Végezetül a <em>k</em><em><sub>d</sub></em><em>
+</em>ismeretében a dekódolásnak is gyorsnak kell lenni.</p>
+<p><em>P</em>, <em>C</em> és <em>K</em> halmazok véges hosszúságú
+bináris szavakból állnak, így maguk is véges halmazok. 
+</p>
+<p><em>E</em> illetve <em>D</em> függvényeket könnyű kiszámítani,
+ha maximális bonyolultságuk kis kitevőjű polinommal becsülhető.
+A legjobb, ha a kitevő egy, azaz a kiszámítás bonyolultsága
+lineáris. Ha <em>E</em> bonyolultsága polinomiális, akkor persze <em>m</em>
+hossza is becsülhető <em>u</em> és <em>k</em><em><sub>t</sub></em><em>
+</em>összhossza polinomiális függvényével. Ugyanennek kell
+teljesülnie <em>k</em><em><sub>d</sub></em><em> </em>-re is, mert
+különben a visszafejtés <em>k</em><em><sub>d</sub></em><em>
+</em>ismeretében sem lehet gyors. A Figyelő tehát exponenciális
+időben mindig vissza tudja fejteni az eredeti üzenetet. A jó
+kriptográfiai függvény tehát olyan, amelyre a dekódolás
+egyetlen inputra sem történhet meg exponenciálisnál lényegesen
+gyorsabban. A fentiekben leírt <em>E</em> függvényeket szokás
+<em>egyirányú függvénynek (one way function)</em> nevezni. Azokat
+az egyirányú függvényeket pedig, amelyeknek van a fentiekben
+leírt dekódoló <em>D</em> párja, <em>egyirányú csapóajtó
+függvénynek (one way trapdor function)</em> nevezzük.</p>
+<p>Digitális információk kódolása kétféleképpen történhet:
+vagy az egész üzenetet egyszerre kódoljuk, amit folyamkódolásnak
+(stream cipher) nevezünk, vagy pedig az üzenetet feldaraboljuk, a
+darabokat külön-külön kódoljuk és az eredményt a nyelő
+oldalán ismét összefűzzük. Az utóbbit blokk kódolásnak (block
+coding) nevezzük.</p>
+<p>A <b>szimmetrikus titkosítás</b><span style="font-weight: normal">
+</span><span style="font-weight: normal">(pl eltolásos, affin,
+helyettesítéses, Vigenére)</span> előnye az egyszerűség és
+gyorsaság, hátránya viszont a legfőbb tulajdonságából
+származik: a titkosításhoz és kódoláshoz ugyanaz a kulcs
+használatos, így azt a feladónak és a címzettnek is ismernie
+kell. 
+</p>
+<p>A szimmetrikus titkosítás néhány modern képviselője a DES, a
+TripleDES (168 bit), AES, TwoFish, GOST 28147-89 és az IDEA (128
+bit). Ezek sok, egyszerű transzformáció egymás utáni
+végrehajtása után érik el a kívánt titkosítási szintet. A
+módszerhez szükségünk van egy nem feltétlenül invertálható F
+függvényre és ha n-szer iteráljuk a kódolási menetet, akkor n+1
+menetkulcsra: K<sub>0</sub>,…,K<sub>n</sub> . A különböző
+titkosítási eljárások ezek megválasztásában térnek el
+egymástól. A<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+titkosító (és visszafejtő) kulcsot mindkét partnernek ismernie
+kell az üzenetcseréhez. A kulcsot tehát biztonságos módon kell
+eljuttatni a partnerhez, más nem szerezheti meg és a fogadó félnek
+biztosnak kell lenni abban, hogy attól kapta a kulcsot, aki ezt
+állítja magáról. </span></font></font>
+</p>
+<p align="left"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><b>Nyilvános
+kulcsú: </b></font></font>
+</p>
+<p>Lényege: minden felhasználó (feladó és címzett egyaránt)
+rendelkezik egy kulcspárral, ami egy nyilvános (public) és egy
+titkos (private) kulcsot tartalmaz. A mindenki számára elérhető
+nyilvános kulcs a titkosításhoz, a csak a tulajdonosa által
+ismert privát kulcs pedig a visszafejtéshez használatos. Fontos
+megjegyezni, hogy a nyilvános kulcsból a titkos kulcs nem
+számítható ki még az előállításukra szolgáló algoritmus
+ismeretében sem.</p>
+<p>A címzett nyilvános kulcsával titkosítjuk az üzenetet, amit
+rajta kívül más nem tud elolvasni, hiszen csak ő rendelkezik a
+visszafejtést végző titkos kulccsal. A módszer erősségét a
+szimmetrikus kulcsos titkosítás hátrányának kiküszöbölése
+adja: azok is tudnak titkosított üzeneteket váltani, akik nem
+ismerik egymást (elég, ha előzőleg kicserélték nyilvános
+kulcsaikat). 
+</p>
+<p>Az egyik legelső algoritmus, az RSA, máig feltörhetetlennek
+bizonyult és széles körben elterjedt.</p>
+<p align="left"><br/>
+<br/>
+
+</p>
+<p align="left"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><b>Hash
+függvények:</b></font></font></p>
+<p align="left" style="margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Az
+azonos</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">ítás
+mechanizmusa</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><b>:
+</b></span></span></font></font></font></font>
+</p>
+<p align="left" style="margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Inicializ</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">álás:
+felhasználónév + azonosító(k) megadása és tárolása.</span></span></span></font></font></font></font></p>
+<p align="left" style="margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Azonosítás:</font></font></font></p>
+<p align="left" style="margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#333399"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Felhasználónév
+megadása </span></span></span></font><font color="#99cc00"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Ha
+van ilyen felhasználó, akkor tovább, különben elutasítás</span></span></span></font></font></font></font></p>
+<p align="left" style="margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#333399"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Azonosító
+megadása </span></span></span></font><font color="#99cc00"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Ha
+a felhasználóhoz tartozik ilyen azonosító, akkor tovább,
+különben elutasítás</span></span></span></font></font></font></font></p>
+<p align="left" style="margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Egyir</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">ányú
+függvény – h használatával: </span></span></span></font></font></font></font>
+</p>
+<p align="left" style="margin-top: 0.21cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 90%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Inicializálás:
+felhasználónév + h(azonosító)(k) megadása és tárolása.</font></font></font></p>
+<p align="left" style="margin-top: 0.21cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 90%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Azonosítás:</font></font></font></p>
+<p align="left" style="margin-top: 0.21cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 90%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#333399"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Felhasználónév
+megadása </span></span></span></font><font color="#99cc00"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Ha
+van ilyen felhasználó, akkor tovább, különben elutasítás</span></span></span></font></font></font></font></p>
+<p align="left" style="margin-top: 0.18cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 90%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#333399"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Azonosító
+ - a – megadása </span></span></span></font><font color="#99cc00"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">h(a)
+kiszámítása,</span></span></span></font><font color="#333399"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">
+</span></span></span></font><font color="#99cc00"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Ha
+a felhasználóhoz tartozik ilyen h(a), akkor tovább, különben
+elutasítás</span></span></span></font></font></font></font></p>
+<p align="left" style="margin-top: 0.21cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 90%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#ff0066"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">A
+mai azonosító mechanizmusok nagy része így működik.</font></font></font></p>
+<p align="left" style="margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Egyir</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">ányú
+függvény</span></span></span></font></font></font></font></p>
+<p align="left" style="margin-top: 0.28cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 100%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Olyan
+h f</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">üggvény,
+amelynek értékét h(x)- et könnyen ki lehet számítani, de a h-t 
+kiszámító algoritmus és h(x) ismeretében  x-et nagyon nehéz
+meghatározni. Pl. </span></span></span></font><font color="#99cc00"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">telefonkönyv</span></span></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">
+.</span></span></span></font></font></font></font></p>
+<p align="left" style="margin-top: 0.28cm; margin-bottom: 0cm; font-style: normal; font-weight: normal; line-height: 90%; orphans: 2; widows: 2; text-decoration: none">
+<font color="#000000"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">Legyen
+p egy nagy prímszám, 1&lt;g&lt;p-1  olyan, hogy {1,g,g</span></span></span></font><font color="#000000"><span style="text-decoration: none"><sup><span style="font-style: normal"><span style="font-weight: normal">2
+</span></span></sup></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">
+mod p,…,g</span></span></span></font><font color="#000000"><span style="text-decoration: none"><sup><span style="font-style: normal"><span style="font-weight: normal">p-2
+</span></span></sup></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">
+ mod p}  ={1,2,…,p-1}, 0&lt;x&lt;p-2 és h(x) =  g</span></span></span></font><font color="#000000"><span style="text-decoration: none"><sup><span style="font-style: normal"><span style="font-weight: normal">x</span></span></sup></span></font><font color="#000000"><span style="text-decoration: none"><span style="font-style: normal"><span style="font-weight: normal">
+ mod p.  Akkor h(x) egyirányú függvény.</span></span></span></font></font></font></font></p>
+<h3 class="western" align="left"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><b>Hash
+függvények fogalma</b></font></font></h3>
+<p>A kriptográfiában az adatok integritásának biztosítására
+szolgál. Mindössze egy fix hosszúságú, igen kisméretű
+bitsztringre (kb. 160 bit) koncentrálunk. A tetszőleges méretű
+üzenetre egy hash függvényt hajtunk végre, melynek eredményeként
+egy fix méretű hash értéket (üzenetkivonatot vagy lenyomatot)
+kapunk. A hash függvény tehát egy H:{0,1}<sup>*</sup>--›{0,1}<sup>n</sup>
+függvény, azaz egy tetszőleges hosszúságú bitsorozatot egy fix
+hosszúságú bitsorozatba képez. Az ellenőrző fél lefuttatja a
+hash függvényt az eredeti üzenetre és az eredményként kapott
+üzenetkivonatot összehasonlítja a korábbi üzenetkivonattal. Ha a
+lenyomatok megegyeznek, akkor az üzenet nem módosult. A hash
+függvények alkalmazásával a nyilvános, nem biztonságos
+csatornán integritásvédelmet lehet megvalósítani.</p>
+<p>Ahhoz, hogy ez a megoldás biztonságos legyen, garantálni kell,
+hogy az üzenet egyetlen bitjének módosulása maga után vonja a
+lenyomat változását, tehát ne lehessen megadni két olyan
+üzenetet, melynek lenyomata megegyezik. Célunk az, hogy
+polinomiális idő alatt ne lehessen olyan üzeneteket találni,
+melyek hash értéke megegyezik. Az ilyen hash függvényeket
+ütközésmentes hash függvényeknek nevezzük.</p>
+<p>A kriptográfiában használt hash függvényeket az
+elkötelezettségi rendszereknél (commitment scheme) is alkalmazzuk.
+Ha valaki szeretné elkötelezni magát egy x adathoz, anélkül,
+hogy megmondaná az x értékét, akkor kiszámítja H(x||r) értéket,
+ahol H egy hash függvény és r egy véletlen bitsorozat. Később
+felbontja elkötelezettségét, azaz megadja az x és az r értékeket.
+Az ilyen esetekben fontos az, hogy H(x||r) ismeretében az x értékről
+ne tudjunk meg hasznos információkat, azaz a H hash függvénynek
+egyirányúnak kell lennie. Az egyirányúság biztosítja, hogy a
+lenyomatból az eredeti üzenet kiszámítása nehéz. Az egyirányú
+hash függvény lehetővé teszi, hogy egy entitás az üzenet
+lenyomatának megadásával „borítékolja” az üzenetet, azaz
+elrejtse, de ugyanakkor elkötelezze magát amellett.</p>
+<p>Ismertebb hash függvények:</p>
+<p><u>Az MD5</u> (Message-Digest algorithm 5) egy 128 bites hash
+értékkel rendelkező hash függvény. Az MD5-öt az RSA egyik
+alkotója Rivest fejlesztette ki 1991-ben. Egy fix hosszúságú
+üzenethez egy rövidebb fix hosszúságú üzenetet rendel. Két
+inputja van, egy 128 bit hosszú Y sztring és egy 512 bit hosszú B
+blokk, a függvényérték pedig egy 128 bites sztring. Egy
+tetszőleges hosszúságú x üzenet lenyomatának generálása a
+következőképpen történik:</p>
+<ol>
+	<li/>
+<p>A tetszőleges hosszú m üzenetet kitöltjük úgy, hogy a
+	hossza az a legkisebb érték legyen, mely osztható 512-vel. A
+	kitöltést egy 1-es bittel kezdjük, majd tetszőleges számú 0-t
+	írunk. A kitöltést az eredeti m üzenet 64 biten ábrázolt
+	hosszával zárjuk. Az így kitöltött üzenetet jelöljük M-mel.</p>
+	<li/>
+<p>Vágjuk fel az M üzenetet 512 bit hosszú blokkokra,
+	jelölje B<sub>1</sub>, B<sub>2</sub>, …B<sub>n</sub> az így
+	keletkezett blokkokat.</p>
+	<li/>
+<p>Vegyünk egy fix 128 bit hosszú kezdeti vektort: IV, és
+	legyen Y<sub>0</sub>=IV.</p>
+	<li/>
+<p>Kiszámítjuk Y<sub>i</sub>=CF(Y<sub>i-1</sub>,B<sub>i</sub>)
+	kompressziós függvényértékeket,ahol i=1,…,n.</p>
+	<li/>
+<p>Az eredeti m üzenet lenyomata: H(m)=Y<sub>n</sub> , azaz a
+	keletkezett hash érték az utolsó blokkra vonatkozó kompressziós
+	függvényérték lesz, mely 128 bit.</p>
+</ol>
+<p><u>SHA</u>  lenyomat 160 bit hosszú, a kompressziós függvény
+160 bites és 512 bites sztringhez 160 bitet rendel (160×512--›160).
+A kompressziós függvény a következőképpen adott:
+CF(Y,B<sub>i</sub>)=CF<sub>0</sub>(Y,B<sub>i</sub>)+(A,B,C,D,E).</p>
+<p>Hasonlóan az MD5-höz az SHA is egy CF0 kódoló függvényt
+futtat, mely egy 160 bit hosszú Y=(A,B,C,D,E) és 512 bites Bi
+blokkhoz 160 bitet rendel.</p>
+<p>Az üzenethitelesítő kódokra a<u> MAC (Message Authentication
+Code) </u>rövidítést is használják. Ezek a kódok egy dokumentum
+hitelességét garantálják egy nem biztonságos csatorna
+használatakor. A küldő és a fogadó fél biztonságos csatornán
+kicserél egy titkos kulcsot, majd a küldő fél a titkos kulccsal
+elkészíti üzenetének MAC kódját. Az üzenet is és a kód is
+továbbítódik. A fogadó fél a titkos kulcs ismeretében szintén
+kiszámítja a kapott üzenet MAC kódját és ellenőrzi, hogy a két
+MAC kód megegyezik-e.</p>
+<p>Az üzenethitelesítő kódok, mint ahogy a neve is mutatja, az
+üzenet hitelességét garantálja, ami magába foglalja az üzenet
+adatintegritását, azaz változatlanságát és az üzenet eredetét
+is igazolja. Következésképpen MAC használatával ellenőrizni
+tudjuk, hogy a kapott üzenet megegyezik az elküldöttel, valamint
+az üzenetet ténylegesen az a személy vagy entitás küldte, akitől
+várjuk.</p>
+<p>Hitelesítő kódot kaphatunk hash függvényekből is a
+következőkben ismertetett megoldást HMAC-nek nevezik.</p>
+<p><u>A HMAC (Hash-based Message Authentication Code) </u> egy a
+kriptográfiában alkalmazott hash függvény és egy titkos kulcs
+kombinációja. A konstrukció lehetővé teszi az MD5 és a SHA-1
+hash függvény alkalmazását is, ekkor HMAC-MD5-nek vagy
+HMAC-SHA-1-nek nevezzük a hitelesítő kódot.</p>
+<p>A HMAC az üzenetet szintén blokkokra bontja, melynek mérete MD5
+és SHA-1 esetén 512 bit. A blokkokra kompressziós függvényt
+alkalmazva a HMAC egy 128 vagy 160 bit hosszú sztringet ad attól
+függően, hogy milyen hash függvényt alkalmaz. Legyen m az üzenet,
+melynek hitelesítő kódját kívánjuk meghatározni, jelölje K a
+titkos kicserélt HMAC titkos kulcsot és legyen H egy választott
+hash függvény. A lépések a következők:</p>
+<ol>
+	<li/>
+<p>Ha K hosszabb, mint a hash függvény blokkmérete, akkor
+	legyen K a H(K) érték, így K rövidebb, mint a blokkméret.</p>
+	<li/>
+<p>Ha K rövidebb, mint a blokkméret, akkor kitöltjük 0-val
+	míg a mérete megegyezik a blokkmérettel.</p>
+	<li/>
+<p>Kiszámítjuk H((K⊕opad)||H((K⊕ipad)||m)), ahol ipad és
+	opad két fix bitsztring. Az opad (outer padding) külső kitöltést,
+	míg az ipad (inner padding) belső kitöltést jelöl. Az ipad egy
+	blokkméretnyi hexadecimális konstans: 0x363636…36. Az opad
+	szintén egy blokkméretnyi hexadecimális konstans: 0x5c5c5c…5c5c.</p>
+</ol>
+<p align="left" style="margin-bottom: 0cm; line-height: 100%"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><b>Digitális
+aláírás:</b></font></font></p>
+<p>Az aláírt dokumentum igazolja az aláíró személyét vagy
+intézményét, valamint azt, hogy az adott személy/intézmény a
+dokumentum tartalmát ismeri, elfogadja, egyetért vele. Ezen kívül
+az aláírás igazolja, hogy a dokumentum tartalma nem változott
+meg; nem írtak bele új mondatokat és nem is töröltek belőle.</p>
+<p>A digitális aláírás az üzenthez csatlakozik, azaz az aláíró
+algoritmus hozzáfűzi az aláírást a konkrét elektronikus
+dokumentumhoz. Digitális aláírás érvényessége ellenőrző
+algoritmus futtatásával igazolható, mely bárki számára
+elérhető. Aláírás hamisítási szempontból a digitális
+aláírások sokkal megbízhatóbbak.</p>
+<p>Digitálisan aláírt dokumentum könnyen másolható és a
+másolat megegyezik az eredetivel. Egy megoldás speciális digitális
+aláírási rendszerek használata, a letagadhatatlan aláírások
+alkalmazása, mikor az aláírás ellenőrzéséhez az aláíró
+személy részvétele is szükséges.</p>
+<h4 class="western">Kategóriái</h4>
+<p>A normál elektronikus aláírás, a fokozott biztonságú,
+valamint a minősített elektronikus aláírások kategóriájába.</p>
+<p>A normál elektronikus aláírás a legtágabb kör, bármely
+elektronikus formájú aláírás idesorolható. Példaként
+említhetjük az e-mailjeink végére begépelt nevünket, vagy a
+különböző digitális tollakkal írt aláírást is.</p>
+<p>A fokozott biztonságú elektronikus aláírás olyan
+&quot;elektronikus aláírás, amely megfelel a következő
+követelményeknek”:</p>
+<ol>
+	<li/>
+<p>Alkalmas az aláíró azonosítására, és egyedülállóan
+	hozzá köthető,</p>
+	<li/>
+<p>Olyan eszközzel hozták létre, mely kizárólag az aláíró
+	befolyása alatt áll,</p>
+	<li/>
+<p>A dokumentum tartalmához olyan módon kapcsolódik, hogy
+	minden - az aláírás elhelyezését követően az iraton, illetve
+	dokumentumon tett - módosítás érzékelhető</p>
+</ol>
+<p><a name="d0e4489"></a>A fokozott biztonságú elektronikus aláírás
+tehát a nyilvános kulcsú technológia, azaz a digitális aláírási
+technika felhasználásával készül. Amennyiben a fokozott
+biztonságú elektronikus aláírás minősített tanúsítványon
+alapul, akkor minősített elektronikus aláírásról beszélünk. 
+</p>
+<p>Egyes bírósági eljárásokban legalább fokozott biztonságú
+elektronikus aláírással ellátott elektronikus iratokat fogadnak
+el, a minősített elektronikus aláírással ellátott elektronikus
+dokumentum teljes bizonyító erejű magánokiratnak minősül.</p>
+<p><u>A</u><u> digitális aláírási séma </u>ismertetéséhez
+három algoritmust kell megadni. Szükség van egy olyan
+algoritmusra, mely az üzenet aláírására szolgál, és szükséges
+az üzenethez csatolt aláírás ellenőrzését végrehajtó eljárás
+is. A harmadik algoritmus a kulcsgeneráló algoritmus, mely során
+meghatározódnak az aláírás során, illetve az ellenőrzéshez
+használt kulcsok. Biztosítani kell, hogy az aláírás ellenőrzését
+bárki elvégezhesse, azaz az ellenőrző algoritmus és a szükséges
+paraméterek mindenki számára elérhetőek legyenek. 
+</p>
+<p>Az aláíró entitás egy tetszőleges  nyílt szöveghez generál
+egy aláírást az aláíró algoritmus segítségével úgy, hogy
+azt csak ő tudja kiszámítani. Ezt úgy lehet biztosítani, hogy
+felhasznál egy aláíró kulcsot, amit csak ő ismer.
+Következésképpen az aláírás értéke függ a nyílt szövegtől
+és a kulcsgeneráló algoritmus által létrehozott titkos aláíró
+kulcstól. Az így keletkezett aláírás a nyílt üzenethez
+csatolódik. Az aláírás tulajdonképpen egy a nyílt szöveghez
+csatolt bitsorozat. Az aláírást ellenőrző entitás, pedig
+lefuttatja az ellenőrző algoritmust, melynek visszatérési értéke
+igaz, amennyiben az aláírás érvényes, és hamis, ha nem. Az
+ellenőrző entitás tehát az aláírás érvényességét a kapott
+nyílt szöveg és egy nyilvános ellenőrző kulcs segítségével
+dönti el.</p>
+<p>Mivel a nyilvános kulcsból a titkos kulcs kiszámítására
+polinomiális algoritmus nem ismert, így nyugodtan – mint ahogy a
+nevében is szerepel – nyilvánosságra is hozható, a titkos kulcs
+titkossága nem sérül, biztonságosan alkalmazható. Digitális
+aláírási sémáknál a titkos kulcsot aláírásra használjuk,
+hiszen alapvető cél az aláíró entitás egyértelmű
+beazonosítása, a nyilvános kulcs pedig az aláírás ellenőrzésére
+szolgál, hiszen garantálni kell, hogy bárki képes legyen arra,
+hogy eldöntse az aláírás hitelességét.</p>
+<p>A digitális aláírási séma definíciója a következő:</p>
+<p><strong>Definíció.</strong> Jelölje P a lehetséges üzenetek
+halmazát és A az aláírások halmazát. Az AS=(K, Sign, Ver)
+digitális aláírási séma három algoritmusból áll:</p>
+<ul type="disc">
+	<li/>
+<p>A K kulcsgeneráló algoritmus egy polinom idejű
+	algoritmus, melynek inputja a k biztonsági paraméter, outputja egy
+	véletlen (SK,PK) kulcspár, ahol SK jelöli a titkos kulcsot, PK
+	pedig a nyilvános kulcsot. A generált kulcsok mérete függ a k
+	biztonsági paramétertől, aminek értékét a konkrét rendszerrel
+	szembeni sikeres támadások határozzák meg.</p>
+	<li/>
+<p>Az Sign aláíró algoritmus az mЄP szöveg és az SK
+	titkos kulcs felhasználásával egy sЄA aláírást generál.
+	Vannak olyan rendszerek, melyek az aláírás generálásánál
+	további véletlen paramétereket is alkalmaznak, így a kapott
+	aláírás randomizált.</p>
+	<li/>
+<p>A Ver ellenőrző algoritmus az (m,s)Є P×A elempárhoz, a
+	PK nyilvános kulcs alkalmazásával igaz vagy hamis értéket
+	rendel aszerint, hogy az s érvényes aláírása-e az m üzenetnek.</p>
+</ul>
+<p>Az előbbi definícióban szereplő Sign algoritmus az SK titkos
+kulcs ismeretében egy adott m üzenethez polinomiális időn belül
+számítja ki a megfelelő s aláírást. Viszont, ha a titkos kulcs
+nem ismert, akkor fontos az, hogy egy adott m üzenethez ne lehessen
+érvényes s aláírást létrehozni polinomiális időn belül. Ez a
+kitétel azt is jelenti, hogy a PK nyilvános kulcsból ne lehessen
+polinomiális időn belül a hozzátartozó SK titkos kulcsot
+kiszámítani. Természetesen az is feltétel, hogy tetszőleges
+szabályosan generált aláírásra lefuttatott ellenőrző
+algoritmus visszatérési értékének igaznak kell lennie.</p>
+<p>Az ellenőrző algoritmus az (m,s)Є P×A elempár vizsgálatához
+a megfelelő PK nyilvános kulcsot használja fel. Csak abban az
+esetben lesz érvényes az s aláírás az adott m üzenettől
+függően, ha az aláíró entitás nyilvános kulcsával történik
+az ellenőrzés. Az aláíró entitás nyilvános kulcsát egy
+hitelesítés-szolgáltató által kibocsátott aláíró tanúsítvány
+tartalmazza. Így a nyilvános tanúsítvány alapján biztosak
+lehetünk abban, hogy az aláírás ellenőrzése során alkalmazott
+nyilvános kulcs a megfelelő kulcs.</p>
+<p>Az aláíró entitás üzenetét titkos kulccsal írja alá, és
+az így kapott aláírást és az üzenetet is elküldi. Az aláírást
+ellenőrző személy az aláírásra az aláíró nyilvános kulcsát
+alkalmazza, majd az elküldött üzenetet is figyelembe véve
+ellenőrzést végez.</p>
+<p>Az üzenetre egy egyirányú hash függvényt alkalmazunk, melynek
+eredménye egy fix hosszúságú bitsorozat lesz. Majd erre az
+üzenetkivonatra alkalmazza az aláíró a titkos kulcsát. Az aláírt
+üzenetkivonat és az üzenet kerül elküldésre. Az ellenőrző az
+aláírt üzenetkivonatra alkalmazza az aláíró nyilvános kulcsát,
+illetve kiszámítja az üzenet egyirányú hash értékét.
+Amennyiben az így kapott üzenetkivonatok megegyeznek, akkor az
+aláírás érvényes. Az egyirányú hash függvény alkalmazásával
+a folyamat jelentősen felgyorsul, hiszen tetszőleges hosszúságú
+üzenet esetén is ugyanolyan hosszú kivonat (kb. 160 bit) kerül
+aláírásra, ami egy hatékony, de lassú folyamat. Az egyirányú
+hash függvény nemcsak felgyorsítja a folyamatot, de a rendszer
+biztonságát is jelentősen növeli. 
+</p>
+<p><u>Amennyiben az aláírás érvényes, akkor a következő
+tulajdonságok teljesülnek:</u></p>
+<p>1. Hitelesítés (authentication) (4): Hitelesítés során a
+fogadó félnek biztosítékot adunk arra, hogy az adott információ
+valamely támadó által nem lett megváltoztatva, vagy kicserélve.
+Ha a következő két tulajdonság egyszerre teljesül, akkor az
+adott üzenet hiteles.</p>
+<ul type="disc">
+	<li/>
+<p>Üzenet adatintegritása: A dokumentum aláírás után nem
+	változtatható meg. 
+	</p>
+	<li/>
+<p>Üzenet eredetének igazolása: Az aláíró kiléte
+	beazonosítható a kulcspárja segítségével, hiszen csak akkor
+	lett szabályosan legenerálva az aláírás, ha az ellenőrzésnél
+	felhasznált nyilvános kulcs titkos párjával lett aláírva. 
+	</p>
+</ul>
+<p>2. Letagadhatatlan (non-repudiation):</p>
+<p>Mivel az aláírás érvényességét bárki ellenőrizheti, így
+bárki meggyőződhet arról, hogy az adott dokumentumot vagy
+üzenetet egy adott entitás aláírta. Következésképpen a
+digitálisan aláírt dokumentum nem letagadható. Ha a dokumentumon
+időpecsét is szerepel, akkor az aláírás időpontjáról is van
+információnk.</p>
+<p>3. Hamisíthatatlan 
+</p>
+<p>Adott dokumentumhoz egy A entitás helyett egy B entitás nem
+képes olyan digitális aláírást készíteni, amelyet elfogadnának
+az A entitás aláírásaként. Hasonlóképpen a dokumentum sem
+hamisítható, hiszen két különböző dokumentum aláírásának
+különböznie kell. Amennyiben csak a tulajdonos ismeri titkos
+kulcsát, akkor az aláírás nem hamisítható.</p>
+<p>4. Az aláírás nem átruházható 
+</p>
+<p>Az aláírt üzenet kivonat egy adott üzenethez tartozik, más
+üzenethez nem csatolható, hiszen lenyomatuk különbözik.</p>
+<h3 class="western" align="left"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><b>A
+digitális aláírás fajtái és alkalmazása</b></font></font></h3>
+<p>Vak aláírási technikához folyamodhatunk, ha a másik féllel
+nem akarjuk tudatni, hogy mit ír alá. Tipikus alkalmazási területe
+az elektronikus szavazások és az elektronikus pénz. Elektronikus
+szavazás esetén úgy kell érvényesíteni egy szavazatot, hogy a
+hitelesítő szervezet ne tudja meg, hogy az adott szavazó kire
+voksolt. 
+</p>
+<p>Az online nyereményjátékoknál, időbélyeg-szolgáltatással
+hitelesítik egy adott időpontban beérkezett tippeket. Egy külső
+megbízható szervezet igazolja a beérkezett tippek időpontját. 
+</p>
+<p>A digitális aláírások egy gyakori alkalmazása a programkódok
+aláírása. A kód aláírása egyértelműen igazolja az adott
+szoftver készítőjét, illetve garantálja, hogy a programkód a
+kibocsátás óta nem módosult. Ha a felhasználó bármely, a
+szoftver által generált rosszindulatú működést azonosít be,
+akkor feltételezhető, hogy az adott szoftver kódját senki más
+nem változtatta meg, egyértelműen a szerző a felelős.</p>
+<p>Az azonosítás terén jelentős mérföldkő a digitális aláírás
+alkalmazása. A digitális aláírás segítségével egyértelműen
+meg tudjuk határozni a másik fél identitását. 
+</p>
+<p>Elektronikus dokumentumok esetén az <u>időbélyeg-szolgáltatás
+</u>hitelesíti a dokumentum létrejöttének idejét. 
+</p>
+<p>Az időbélyegzés egy olyan elektronikus igazolás, mely
+bizonyítja, hogy egy elektronikus dokumentum egy adott időpontban
+már létezett, és annak tartalma az időbélyegzés óta nem
+változott meg. Az időbélyeg általában az elektronikus aláírás
+létrehozásának időpontját igazolja, de használatos akkor is, ha
+valamely dokumentum vagy állomány adott időben való létezésének
+későbbi bizonyítása a cél. 
+</p>
+<p>A <u>vak aláírás </u>a digitális aláírás egy módosított
+változata, melynek során az aláíró úgy hitelesíti a
+dokumentumot, hogy nem ismeri annak tartalmát. Tipikusan olyan
+alkalmazásoknál használatos, ahol valamilyen bizalmas információt
+kell hitelesíttetni. 
+</p>
+<p>A különbség a digitális aláírások és a vak aláírások
+között, hogy az utóbbinál aláíró fél az aláírás
+időpontjában nem ismeri az üzenet tartalmát, míg az előbbinél
+igen. Viszont az aláírás ellenőrzése mindkét esetben ugyanúgy
+történik, tehát akkor már akár az aláíró fél is, aki eddig
+„vak” volt, megtekintheti az üzenet tartalmát.</p>
+<p>A <u>letagadhatatlan aláírások</u> több jó tulajdonsággal is
+rendelkeznek. Közülük a legjelentősebb, hogy egy aláírást csak
+az aláíró fél közbenjárásával lehet ellenőrizni. Ez lehetővé
+teszi, hogy az aláíró fél védje az aláírt üzenetet attól,
+hogy bárki elektronikusan lemásolhassa, illetve szétküldhesse. Az
+aláírás ellenőrzése az úgynevezett kihívás-és-válasz
+technika alkalmazásával végezhető el.</p>
+<p align="left"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><b>AES</b></font></font></p>
+<p align="left" style="font-weight: normal; text-decoration: none"><a name="d0e3297"></a>
+<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Az
+egyik legrégebbi és polgári alkalmazásoknál leggyakrabban
+használt szimmetrikus titkosítási algoritmus a DES, amely a Data
+Encryption Standard rövidítése. Az eljárás 64 bites
+üzenetblokkokat kódol 64 bites kulccsal, ebből azonban 8 bit
+paritásellenőrzésre szolgál, így a kulcs csak 56 bites. </font></font>
+</p>
+<p>Az eljárás bemenete a 64 bites K kulcs, amelyből minden
+nyolcadik bit paritásellenőrzésre szolgál és az ugyancsak 64
+bites u kódolandó információblokk. (Több blokkból álló
+üzenetet úgy kódolunk, hogy a blokkokat külön-külön ugyanazzal
+a kulccsal titkosítjuk, majd a kapott blokkokat összefűzve
+juttatjuk el a fogadó félhez.) A DES algoritmus leírása:</p>
+<p>A DES minden ciklusban 48 bites menetkulcsokat használ, amelyeket
+a mesterkulcsból származtat. Ennek algoritmusa:</p>
+<p>A DES-el titkosított adatok dekódolása úgy történik, hogy a
+titkosító algoritmust alkalmazzuk a kódolt szóra, azonban a
+menetkulcsokat fordított sorrendben generáljuk.</p>
+<p>Nem egy hanem három DES futamot, három különböző kulccsal
+egymás után alkalmaznak az üzenetre. Így a kulcshossz 168 bitre
+nő. Ezt a formát háromszoros vagy tripla DES-nek, TDES-nek
+nevezzük. Ez az alapja az AES-nek is.</p>
+<p align="left"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><b>Advanced
+Encryption Standard </b></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><b>(</b></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><b>AES</b></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><b>):
+</b></font></font>128/192/256 bites blokkokat 128/192/256 bites
+kulccsal titkosít, minden párosításban. Először csak a 128-128
+bites párosítást, később mindegyiket elfogadták szabványnak.
+Az alábbiakban a 128 bites üzenetblokkokat, 128 bites kulccsal
+titkosító algoritmust ismertetjük.</p>
+<p>A Rijndael-algoritmus az alapja, amely a 128 bites input szót 16
+bájtra bontja és ezeket egy 4x4-es táblázatba rendezi, amelyet
+állapotnak (state) nevez. Az eljárás függvényei az
+állapottáblázatokon operálnak. Négy függvényt használ,
+úgymint:</p>
+<ul type="disc">
+	<li/>
+<p>ByteSub(State): az állapot minden bájtját kicseréli egy
+	S-box által meghatározott bájtra. Az S-boxot matematikai
+	függvényként is ki lehet számítani.</p>
+	<li/>
+<p>ShiftRow(State): az állapot i-dik sorát i-1 pozícióval
+	ciklikusan balra tolja. (0. sor marad, 1. sor jobbra 1, 2. sor
+	jobbra 2, stb)</p>
+	<li/>
+<p>MixColumn(State): az állapot oszlopait, mint vektorokat
+	megszorozza egy fix mátrixszal.</p>
+	<li/>
+<p>AddRoundKey(State, RoundKey): bitenkénti xor az aktuális
+	állapot mátrix és a menetkulcs mátrix között.</p>
+</ul>
+<p>Az input szóra először az AddRoundKey függvényt alkalmazza,
+majd 9-szer a ByteSub, ShiftRow (a 2 sorrendje felcserélhető),
+MixColumn és AddRoundKey (ez a 2 akkor cserélhető fel, ha más
+mátrixszal szorzunk) függvényekből álló blokkot. Az eljárást
+végül a ByteSub, ShiftRow és AddRoundKey blokk zárja. Látható,
+hogy az AES-nél már az első lépésben megkezdődik a titkosítás
+a menetkulcs hozzáadásával. A kódolás során 11 menetkulcsot
+használ, amelyeket a mesterkulcsból számít ki.</p>
+<p>Megjegyezzük, hogy a ByteSub függvényhez használt S-box
+(helyettesítés táblázat) előállításának módja szintén
+része a szabványnak. Úgy választották ki, hogy a helyettesítés
+a lehető legtávolabb legyen a lineáris leképezésektől. S-box: 4
+sor, 16 oszlop. Inputot 6 bites szavakra bontjuk, ahol szó =
+x1x2x3x4x5x6, ahol x1 és x6 a sorindexek, x2x3x4x5 az oszlopindexek.
+Ez alapján az S-box ad egy szót, amire az eredetit kicseréljük.</p>
+<p align="left"><br/>
+<br/>
+
+</p>
+<p align="left"><br/>
+<br/>
+
+</p>
+<h3 class="western" align="left"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><b>Az
+RSA algoritmus</b></font></font></h3>
+<p>Legyenek p és q különböző prímszámok, azaz olyan
+természetes számok, amelyeknek 1-en és önmagukon kívül nincs
+más osztójuk. Végtelen sok prímszám létezik. Annak a
+valószínűsége, hogy egy véletlenszerűen kiválasztott x-nél
+kisebb szám prímszám legyen 1/ln x. A Miller-Rabin teszttel
+gyorsan eldönthető, hogy nagy valószínűséggel prímszám-e. 
+</p>
+<p>Nagy prímszámokat tehát könnyű találni, de ha két ilyet
+összeszorzunk, akkor csak a szorzatot ismerve nagyon nehéz a
+tényezőket megtalálni. Ezt a faktorizáció problémájának
+nevezik, ami nehéz algoritmikus probléma.</p>
+<p>Legyenek p és q különböző prímszámok és n=qp. Ekkor az
+n-nél kisebb, n-hez relatív prím természetes számok száma φ(n)
+= (p-1)(q-1). Ezt az értéket p és q ismeretében könnyű
+kiszámítani. A φ függvényt Euler függvénynek nevezzük. Legyen
+most e egy olyan φ(n)-hez relatív prím természetes szám, amelyik
+kisebb φ(n)-nél. Akkor pontosan egy olyan 1 &lt;= d &lt; φ(n)
+természetes szám létezik, amelyre ed mod φ(n) = 1. Ezek után a
+nyilvános kulcs az e,n számpáros, a titkos kulcs pedig a d szám.
+A kulcsok meghatározása után a p és q értékét is titokban kell
+tartani vagy ezeket a számokat meg kell semmisíteni.</p>
+<p>A kódolás során az üzenetet először számok sorozatává
+alakítjuk olyan módon, hogy a számok mindegyike kisebb legyen,
+mint n. Ez könnyen megtehető, hiszen az üzenetet a számítógépben
+bináris alakban tároljuk és most ezt a bináris sorozatot, mint
+egy kettes számrendszerben megadott szám számjegyeit értelmezzük.
+Ezután az egyes m számokat az</p>
+<p>M = m<sup>e</sup> mod n 
+</p>
+<p>képlettel kódoljuk előállítva a rejtjelezett M üzenetet. A
+kódoláshoz csak a nyilvános kulcsot, az e,n számpárt kell
+ismerni! A titkos M üzenetet az</p>
+<p>m = M<sup>d</sup> mod n 
+</p>
+<p>képlet alapján lehet dekódolni. A visszafejtéshez tehát a
+titkos d kulcs ismerete kell!</p>
+<p>A kódolás és dekódolás során is moduláris hatványozást
+kell végezni, amelyik az „intelligens” hatványozó
+algoritmussal elfogadható gyorsasággal elvégezhető. Az elemi
+számelméletből jól ismert Euler-Fermat tételből következik,
+hogy a dekódolás után tényleg az eredeti üzenetdarabot kapjuk
+vissza.</p>
+<p>Az algoritmus ismertetése után néhány megjegyzést teszünk az
+RSA paraméterek megválasztásával kapcsolatban. A titkos kulcs –
+d – mai ismereteink szerint csak a φ(n) birtokában számítható
+ki, φ(n) meghatározása viszont ugyanolyan nehézségű, mint n
+prímtényezőkre bontása. Az RSA biztonsága tehát azon múlik,
+hogy milyen gyorsan tudjuk az n számot faktorizálni. Ma azt
+mondhatjuk, hogy n-nek legalább 1024 bináris, azaz kb. 308
+decimális jegyű számnak kell lennie. 
+</p>
+<p>A p és q megválasztása során nemcsak a nagyságukra kell
+figyelni, hanem arra is, hogy a különbségük is nagy legyen.
+Feltéve, hogy az n 1024 bites szám, p és q-t 512 bitesnek célszerű
+választani úgy, hogy a különbségük legalább 400 bit nagyságú
+legyen.</p>
+<p>d értékét az e és φ(n) egyértelműen meghatározza. Az is
+jól ismert, hogy d értékét a kiterjesztett euklideszi
+algoritmussal könnyen ki tudjuk számítani. Az e-t véletlenszerűen
+választjuk ki az [1, φ(n)-1] intervallumból vagy olyan kis,
+páratlan számnak választjuk, amelynek bináris felírásában
+kevés 1-es számjegy található, például 17 vagy 65537. Az első
+esetben nem biztos, hogy rögtön olyan számot választunk, amelyik
+relatív prím φ(n)-hez, ilyenkor meg kell ismételni a választást,
+amíg ez a feltétel nem teljesül. Be lehet bizonyítani, hogy
+néhány választás után ez igen nagy valószínűséggel teljesül.</p>
+<p>A nyilvános kulcsú titkosítás előnye, hogy a titkos kulcsot
+csak egy ember ismeri, így titkosított üzenetet nyilvános
+csatornán is lehet vele küldeni. A gyakorlatban azonban ez az előny
+csak korlátozottan aknázható ki, mert a jelenleg ismert
+módszerekkel a kódolás (és dekódolás) nagyságrendekkel tovább
+tart, mint a szimmetrikus algoritmusokkal. Ezért az aszimmetrikus
+módszereket csak rövid üzenetek kódolására célszerű
+alkalmazni. Ezen az észrevételen alapulnak az úgynevezett hibrid
+kriptorendszerek, amelyeknél egy szimmetrikus és egy aszimmetrikus
+módszert – pl. AES és RSA – kombinálnak a következőképpen:</p>
+<p>6 - küldő választ egy K kulcsot a szimmetrikus algoritmushoz,</p>
+<p>7 - K-t fogadó nyilvános kulcsával kódolva elküldi fogadónak,</p>
+<p>8 - fogadó a titkos kulcsával visszafejti K-t,</p>
+<p>9 - A bizalmas információcsere K használatával a szimmetrikus
+algoritmussal történik.</p>
+<p>A kulcscserének vannak olyan variánsai is, amelyekben a
+szereplők egyforma mértékben veszik ki részüket a közös kulcs
+kiszámításában. A hibrid kriptorendszer működését úgy is
+felfoghatjuk, hogy a klasszikus szcenárióban alkalmazott futár
+szerepét az aszimmetrikus titkosítás veszi át. Ilyen elven
+működik a távoli számítógépre való biztonságos
+bejelentkezésre szolgáló ssh (secure shell) szabványcsalád.</p>
+<p><br/>
+<br/>
+
+</p>
+<p align="left" style="margin-bottom: 0cm; line-height: 100%; page-break-before: always">
+<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><b>Bővebben:</b></font></font></p>
+<p align="left" style="margin-bottom: 0cm; line-height: 100%"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><b><a href="http://real.mtak.hu/11147/1/1228872.pdf">http://real.mtak.hu/11147/1/1228872.pdf</a>
+8.oldaltól a fogalom</b></font></font></p>
+<p align="left" style="margin-bottom: 0cm; line-height: 100%"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><b><a href="https://gyires.inf.unideb.hu/KMITT/b09/">https://gyires.inf.unideb.hu/KMITT/b09/</a>
+</b></font></font>
+</p>
+</body>
+</html>

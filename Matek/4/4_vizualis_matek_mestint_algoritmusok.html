@@ -1,0 +1,1578 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 6.0.7.3 (Linux)"/>
+	<meta name="created" content="2020-02-19T08:05:10.108688021"/>
+	<meta name="changed" content="2020-05-01T14:53:55.078891531"/>
+	<style type="text/css">
+		@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; line-height: 115% }
+		h1 { margin-bottom: 0.21cm }
+		h1.western { font-family: "Liberation Sans", sans-serif; font-size: 18pt }
+		h1.cjk { font-family: "Noto Sans CJK SC"; font-size: 18pt }
+		h1.ctl { font-family: "Lohit Devanagari"; font-size: 18pt }
+		h2.western { font-family: "Liberation Sans", sans-serif; font-size: 16pt }
+		h2.cjk { font-family: "Noto Sans CJK SC"; font-size: 16pt }
+		h2.ctl { font-family: "Lohit Devanagari"; font-size: 16pt }
+	</style>
+</head>
+<body lang="hu-HU" dir="ltr">
+<h1 class="western" align="center">4.</h1>
+<h2 class="western">Függvények, görbék, felületek leírása és
+számítógépes ábrázolása.</h2>
+<h2 class="western">Függvények leírása és számítógépes
+ábrázolása.</h2>
+<p>Függvény segítségével jeleníthető meg egy ábra: minden
+x-hez tartozik egy y érték. A grafikon elméleti, ezt csak
+közelíthetjük, mivel a gyakorlatban behelyettesítünk, és az
+adott értékeket ábrázoljuk, majd ezeket összekötjük. A
+gyakorlati függvény tehát szakaszokból áll. A behelyettesített
+értékek számától, sűrűségétől függ, hogy hány ponton lesz
+törött a vonal. Számítógép annyi értéket helyettesít, hogy
+legalább 1 px-t ugorjon (ami függ a képernyő felbontásától
+is), így görbének látszik, viszont mindig töröttvonal marad. 
+</p>
+<p><b>1. Polinomiális
+függvények</b><br/>
+a<sub>n</sub>×x<sup>n</sup>+a<sub>n-1</sub>×x<sup>n-1</sup>+...+a<sub>1</sub>×x<sup>1</sup>+a<sub>0</sub>×x<sup>0</sup><br/>
+Polinom:
+x polinomját valamilyen hatványon megszorozzuk (n:fokszám,
+a:együtthatók, x:változó), konstans függvény: 0-adfokú
+polinom.</p>
+<p>f(x)=ax+b 1.fokú polinom, ahol a:meredekség, b:hol metszi
+f(x)-et (vagy y tengelyt) (mivel a értéke nem tud elég nagy lenni,
+ezért függőlegest nem tudunk ábrázolni.<br/>
+Elképzeléshez
+kitalálni függvényt: <br/>
+-ha 2 pont van megadva, éppen
+egyértelmű<br/>
+- 1 ponttal aluldeterminált<br/>
+- több, mint 2
+pont esetén ha 1 egyenesre esnek, könnyű helyzet, ha nem, akkor
+egyik ponton sem megy át, hanem minden pontot közelít a legkisebb
+eltéréssel.</p>
+<p>f(x)=ax<sup>2</sup>+bx+c 2.fokú polinom<br/>
+Elképzeléshez
+függvényt találni:<br/>
+- próbálkozás különböző a, b és c
+értékekkel<br/>
+- kideríteni hol a csúcspont<br/>
+- megadott
+minimum 3 ponttal egyenletrendszer megoldása<br/>
+Hullám ábrázolása
+esetén is célszerűbb polinomiális függvény használata
+szögfüggvény helyett, mert az x-hez tartozó f(x) értékek
+keresése szögfüggvény esetén időigényes, lassú, és apró
+változtatástól is összeomlik. 
+</p>
+<p>f(x)=ax<sup>3</sup>+bx<sup>2</sup>+cx+d 3.fokú
+polinom<br/>
+Megtalálása próbálkozással vagy minimum 4 pont
+megadásával (4 ismeretlen miatt).<br/>
+Ábrázolható 2 parabolával
+is, de úgy törés lesz a csatlakozási ponton.</p>
+<p><b>2. Implicit függvények</b></p>
+<p>Ha nincs egyértelmű hozzárendelés, tehát x-hez több y érték
+tartozik, pl egy kör, vagy egy függőleges esetén<br/>
+Eddig:
+x→f(x) , ahol R→R <br/>
+Implicit esetben: x,y → F(x,y), ahol
+R×R→R <br/>
+F(x,y) = 0</p>
+<p>Minden eddigi függvény átalakítható ilyenné:</p>
+<p>explicit: y= 3x<sup>2</sup>+5x+1		y=f(x)<br/>
+implicit:
+0=3x<sup>2</sup>+5x+1-y	0=f(x)-y</p>
+<p>tehát pl: x<sup>2</sup>+y<sup>2</sup>=9<br/>
+	x<sup>2</sup>+y<sup>2</sup>-9=0<br/>
+	F(x,y)=0</p>
+<p><b>3. Vektor alapján ábrázolok függvényt</b></p>
+<p style="font-weight: normal">Ezek a paraméteres vektorfüggvények,
+vagy paraméterekkel megadott vektor görbék. <br/>
+Mozgó
+helyvektor végpontjai rajzolják a görbét, tehát idő
+függvényében vektort írunk le.<br/>
+Értelmezési tartomány:
+idő.</p>
+<p style="font-weight: normal"><span style="text-decoration: overline">r</span>(t):
+[a,b]→V<sup>2 </sup>, ahol V<sup>2 </sup> a szabad vektorok
+halmaza, a t paraméter valós érték, [a,b] intervallum az
+ábrázolás idejének kezdő és végpontja közötti intervallum, a
+függvény értéke pedig a vektor. 
+</p>
+<p style="font-weight: normal">2 függvényként is lehet
+kezelni:<br/>
+Van (x,y) koordinátám<br/>
+x(t) és y(t) is függvénye
+a t-nek<br/>
+x(t): [a,b]→ R, y(t): [a,b]→ R<br/>
+A vektorfüggvény
+tehát koordináta függvények együttese. Minden t (azaz [a,b]
+intervallumon értelmezett idő) értékre x és y koordinátákat
+ad.</p>
+<p style="font-weight: normal">Ez a módszer egyesíti az eddigiek
+előnyeit: <br/>
+- könnyű kirajzolás (pl y=f(x) esetén)<br/>
+- a
+görbe maga alá is görbülhet, bármilyen alakú lehet ( F(x,y)=0
+esetén)</p>
+<h2 class="western">Görbék leírása és számítógépes
+ábrázolása.</h2>
+<p><b>Implicit típusú görbék</b><br/>
+Behelyettesítés esetén
+bonyolult egyenletet kapunk (Pl
+4x<sup>5</sup>-5x<sup>3</sup>y<sup>7</sup>+sin(x)+cos(y<sup>2</sup>)-7=0)<br/>
+Ábrázolás
+módja: (0,0) behelyettesítése, pontonkénti (pixelenkénti)
+kiértékelés: ha az eredmény rajta van a vonalon, akkor 0-val
+egyenlő, egyébként nincs rajta. <br/>
+Minden pixelt be kell
+helyettesíteni. Lassú kiértékelés, és nem egyértelmű, akár a
+szoftver is elbizonytalanodhat, ezért ritkán használjuk computer
+grafikában.<br/>
+Tulajdonságai: <br/>
+-az (x<sub>0</sub>,y<sub>0</sub>)
+koordinátájú pont akkor és csakis akkor illeszkedik a görbére,
+ha F(x<sub>0</sub>,y<sub>0</sub>)=0<br/>
+- ha F(x<sub>0</sub>,y<sub>0</sub>)&gt;0,
+akkor az görbe fölött helyezkedik el (fel és jobbra)<br/>
+- ha
+F(x<sub>0</sub>,y<sub>0</sub>)&lt;0, akkor az görbe alatt
+helyezkedik el (le és balra)<br/>
+Értékek behelyettesítése a
+távolságot is mutatja (minél nagyobb az érték, annál távolabb
+van a pont)</p>
+<p><b>Polinommal megadott görbe:</b><br/>
+elsőfokú polinom:
+3x-4y-7 = 0, egyenes → elsőrendű görbe<br/>
+másodfokú polinom:
+ 	x<sup>2</sup>+y<sup>2</sup>-9=0, kör→ másodrendű görbe<br/>
+			
+x<sup>2</sup>-y=0, parabola → másodrendű görbe<br/>
+n-edfokú
+polinom: x<sup>n</sup>-3y<sup>n</sup>+...=0 → n-edrendű görbe</p>
+<p>Csak polinommal megadott lehet valahanyadrendű görbe vagy
+algebrai görbe (mivel a függvény is algebrai, nem analitikus. Pl.
+sin(x) analitikus lenne)</p>
+<p>Egy n-edrendű és egy m-edrendű görbének legfeljebb n×m darab
+látható metszéspontja lehet (ezen mindkét görbe átmegy)</p>
+<p><b>Vektorral megadott görbe:</b><br/>
+Mozgó helyvektor
+végpontjai rajzolják a görbét, tehát idő függvényében
+vektort írunk le. (Továbbiak: Függvények, 3.pont) <span style="font-weight: normal">Ezek
+a legáltalánosabban használt görberajzoló függvények.</span></p>
+<p><b>Térbeli görbe</b><span style="font-weight: normal">
+rajzolására alkalmatlanok az implicit és az explicit
+függvények.<br/>
+Csak vektorfüggvénnyel rajzolhatóak.<br/>
+</span><span style="font-weight: normal"><span style="text-decoration: overline">r</span></span><span style="font-weight: normal">(t):
+[a,b]→V</span><sup><span style="font-weight: normal">3</span></sup><span style="font-weight: normal">,
+ahol V</span><sup><span style="font-weight: normal">3</span></sup><sup><span style="font-weight: normal">
+</span></sup><span style="font-weight: normal"> a </span><span style="font-weight: normal">térbeli</span><span style="font-weight: normal">
+vektorok halmaza<br/>
+ </span><span style="font-weight: normal">x(t):
+[a,b]→ R, y(t): [a,b]→ R, </span><span style="font-weight: normal">z</span><span style="font-weight: normal">(t):
+[a,b]→ R</span></p>
+<p><b>Görbe alapján írjunk képletet<br/>
+</b><u><span style="font-weight: normal">Egyenes
+esetén:</span></u><span style="font-weight: normal"> </span><span style="font-weight: normal"><span style="text-decoration: overline">r</span></span><span style="font-weight: normal">(t):
+</span><span style="font-weight: normal">x(t)=a</span><sub><span style="font-weight: normal">1</span></sub><span style="font-weight: normal">t+a</span><sub><span style="font-weight: normal">0</span></sub><span style="font-weight: normal"><br/>
+			y(t)=b</span><sub><span style="font-weight: normal">1</span></sub><span style="font-weight: normal">t+b</span><sub><span style="font-weight: normal">0</span></sub><span style="font-weight: normal"><br/>
+Keressük
+a</span><sub><span style="font-weight: normal">0</span></sub><span style="font-weight: normal">,
+a</span><sub><span style="font-weight: normal">1</span></sub><span style="font-weight: normal">,
+b</span><sub><span style="font-weight: normal">0</span></sub><span style="font-weight: normal">,
+b</span><sub><span style="font-weight: normal">1</span></sub><span style="font-weight: normal">
+számokat<br/>
+Legyen t=0 pillanat az (1,6) pontnál, ez </span><span style="font-weight: normal"><span style="text-decoration: overline">r</span></span><span style="font-weight: normal">(</span><span style="font-weight: normal">0</span><span style="font-weight: normal">).<br/>
+</span><span style="font-weight: normal">Legyen
+t=1 pillanat az (5,4) pontnál, ez </span><span style="font-weight: normal"><span style="text-decoration: overline">r</span></span><span style="font-weight: normal">(</span><span style="font-weight: normal">1</span><span style="font-weight: normal">).<br/>
+</span><span style="font-weight: normal">t=0
+=&gt; </span><span style="font-weight: normal"><span style="text-decoration: overline">r</span></span><span style="font-weight: normal">(</span><span style="font-weight: normal">0</span><span style="font-weight: normal">)<br/>
+	</span><span style="font-weight: normal">x=1
+		</span><span style="font-weight: normal"><span style="text-decoration: overline">x</span></span><span style="font-weight: normal">(0)=a</span><sub><span style="font-weight: normal">1</span></sub><span style="font-weight: normal">×0+a</span><sub><span style="font-weight: normal">0</span></sub><span style="font-weight: normal">=1		=&gt;
+a</span><sub><span style="font-weight: normal">0</span></sub><span style="font-weight: normal">=1<br/>
+	y=6		</span><span style="font-weight: normal"><span style="text-decoration: overline">y</span></span><span style="font-weight: normal">(0)=b</span><sub><span style="font-weight: normal">1</span></sub><span style="font-weight: normal">×0+b</span><sub><span style="font-weight: normal">0</span></sub><span style="font-weight: normal">=6		=&gt;
+b</span><sub><span style="font-weight: normal">0</span></sub><span style="font-weight: normal">=6</span><span style="font-weight: normal">	</span></p>
+<p><span style="font-weight: normal">t=</span><span style="font-weight: normal">1</span><span style="font-weight: normal">
+=&gt; </span><span style="font-weight: normal"><span style="text-decoration: overline">r</span></span><span style="font-weight: normal">(</span><span style="font-weight: normal">1</span><span style="font-weight: normal">)<br/>
+	</span><span style="font-weight: normal">x=1
+		</span><span style="font-weight: normal"><span style="text-decoration: overline">x</span></span><span style="font-weight: normal">(</span><span style="font-weight: normal">1</span><span style="font-weight: normal">)=a</span><sub><span style="font-weight: normal">1</span></sub><span style="font-weight: normal">×</span><span style="font-weight: normal">1</span><span style="font-weight: normal">+a</span><sub><span style="font-weight: normal">0</span></sub><span style="font-weight: normal">=</span><span style="font-weight: normal">5=</span><span style="font-weight: normal">a</span><sub><span style="font-weight: normal">1</span></sub><span style="font-weight: normal">+</span><span style="font-weight: normal">1</span><span style="font-weight: normal">	</span><span style="font-weight: normal">=5</span><span style="font-weight: normal">	=&gt;
+a</span><sub><span style="font-weight: normal">1</span></sub><span style="font-weight: normal">=</span><span style="font-weight: normal">4</span><span style="font-weight: normal"><br/>
+	y=6		</span><span style="font-weight: normal"><span style="text-decoration: overline">y</span></span><span style="font-weight: normal">(</span><span style="font-weight: normal">1</span><span style="font-weight: normal">)=b</span><sub><span style="font-weight: normal">1</span></sub><span style="font-weight: normal">×</span><span style="font-weight: normal">1</span><span style="font-weight: normal">+b</span><sub><span style="font-weight: normal">0</span></sub><span style="font-weight: normal">=</span><span style="font-weight: normal">4=
+</span><span style="font-weight: normal">b</span><sub><span style="font-weight: normal">1</span></sub><span style="font-weight: normal">+</span><span style="font-weight: normal">6=4</span><span style="font-weight: normal">	=&gt;
+b</span><sub><span style="font-weight: normal">1</span></sub><span style="font-weight: normal">=-</span><span style="font-weight: normal">2<br/>
+</span><span style="font-weight: normal">Az
+egyenes leírása tehát:  </span><span style="font-weight: normal"><span style="text-decoration: overline">r</span></span><span style="font-weight: normal">(t):
+</span><span style="font-weight: normal">x(t)=</span><span style="font-weight: normal">4t+1</span><span style="font-weight: normal"><br/>
+				y(t)=-</span><span style="font-weight: normal">2t+6</span></p>
+<p><span style="font-weight: normal">Algoritmikusan:
+x(t)=(x</span><sub><span style="font-weight: normal">1</span></sub><span style="font-weight: normal">-x</span><sub><span style="font-weight: normal">0</span></sub><span style="font-weight: normal">)×t+x</span><sub><span style="font-weight: normal">0</span></sub><span style="font-weight: normal"><br/>
+		y(t)=(y</span><sub><span style="font-weight: normal">1</span></sub><span style="font-weight: normal">-y</span><sub><span style="font-weight: normal">0</span></sub><span style="font-weight: normal">)×t+y</span><sub><span style="font-weight: normal">0</span></sub><span style="font-weight: normal"><br/>
+Ahol
+x0, x1, y0, y1 az egér által meghatározott pontok.</span></p>
+<p><u><span style="font-weight: normal">Három pontra illesztett
+görbe</span></u><span style="font-weight: normal">:  </span><span style="font-weight: normal"><span style="text-decoration: overline">r</span></span><span style="font-weight: normal">(t):
+</span><span style="font-weight: normal">x(t)=</span><span style="font-weight: normal">a</span><sub><span style="font-weight: normal">2</span></sub><span style="font-weight: normal">t</span><sup><span style="font-weight: normal">2</span></sup><span style="font-weight: normal">+</span><span style="font-weight: normal">a</span><sub><span style="font-weight: normal">1</span></sub><span style="font-weight: normal">t+a</span><sub><span style="font-weight: normal">0</span></sub><span style="font-weight: normal"><br/>
+					y(t)=</span><span style="font-weight: normal">b</span><sub><span style="font-weight: normal">2</span></sub><span style="font-weight: normal">t</span><sup><span style="font-weight: normal">2</span></sup><span style="font-weight: normal">+</span><span style="font-weight: normal">b</span><sub><span style="font-weight: normal">1</span></sub><span style="font-weight: normal">t+b</span><sub><span style="font-weight: normal">0<br/>
+
+</span></sub><span style="font-weight: normal">Keressük a</span><sub><span style="font-weight: normal">0</span></sub><span style="font-weight: normal">,
+a</span><sub><span style="font-weight: normal">1</span></sub><span style="font-weight: normal">,</span><span style="font-weight: normal">a</span><sub><span style="font-weight: normal">2</span></sub><span style="font-weight: normal">,
+b</span><sub><span style="font-weight: normal">0</span></sub><span style="font-weight: normal">,
+b</span><sub><span style="font-weight: normal">1</span></sub><span style="font-weight: normal">,
+</span><span style="font-weight: normal">b</span><sub><span style="font-weight: normal">2</span></sub><span style="font-weight: normal">
+</span><span style="font-weight: normal">számokat<br/>
+ Legyen t=0
+pillanat az (1,6) pontnál, ez </span><span style="font-weight: normal"><span style="text-decoration: overline">r</span></span><span style="font-weight: normal">(</span><span style="font-weight: normal">0</span><span style="font-weight: normal">).<br/>
+</span><span style="font-weight: normal">Legyen
+t=0.</span><span style="font-weight: normal">7</span><span style="font-weight: normal">
+pillanat az (</span><span style="font-weight: normal">5,2</span><span style="font-weight: normal">)
+pontnál, ez </span><span style="font-weight: normal"><span style="text-decoration: overline">r</span></span><span style="font-weight: normal">(</span><span style="font-weight: normal">0.</span><span style="font-weight: normal">7</span><span style="font-weight: normal">).<br/>
+</span><span style="font-weight: normal">Legyen
+t=1 pillanat az (</span><span style="font-weight: normal">7</span><span style="font-weight: normal">,4)
+pontnál, ez </span><span style="font-weight: normal"><span style="text-decoration: overline">r</span></span><span style="font-weight: normal">(</span><span style="font-weight: normal">1</span><span style="font-weight: normal">).<br/>
+</span><span style="font-weight: normal">t=0
+=&gt; </span><span style="font-weight: normal"><span style="text-decoration: overline">r</span></span><span style="font-weight: normal">(</span><span style="font-weight: normal">0</span><span style="font-weight: normal">)<br/>
+	</span><span style="font-weight: normal"><span style="text-decoration: overline">x</span></span><span style="font-weight: normal">(0)</span><span style="font-weight: normal">=</span><span style="font-weight: normal">a</span><sub><span style="font-weight: normal">2</span></sub><span style="font-weight: normal">0</span><sup><span style="font-weight: normal">2</span></sup><span style="font-weight: normal">+</span><span style="font-weight: normal">a</span><sub><span style="font-weight: normal">1</span></sub><span style="font-weight: normal">0</span><span style="font-weight: normal">+a</span><sub><span style="font-weight: normal">0</span></sub><span style="font-weight: normal">=1		=&gt;
+a</span><sub><span style="font-weight: normal">0</span></sub><span style="font-weight: normal">=1<br/>
+	</span><span style="font-weight: normal"><span style="text-decoration: overline">y</span></span><span style="font-weight: normal">(0)=</span><span style="font-weight: normal">b</span><sub><span style="font-weight: normal">2</span></sub><span style="font-weight: normal">0</span><sup><span style="font-weight: normal">2</span></sup><span style="font-weight: normal">+</span><span style="font-weight: normal">b</span><sub><span style="font-weight: normal">1</span></sub><span style="font-weight: normal">0</span><span style="font-weight: normal">+b</span><sub><span style="font-weight: normal">0</span></sub><span style="font-weight: normal">=6		=&gt;
+b</span><sub><span style="font-weight: normal">0</span></sub><span style="font-weight: normal">=6</span><span style="font-weight: normal">	</span></p>
+<p><span style="font-weight: normal">t=0.</span><span style="font-weight: normal">7</span><span style="font-weight: normal">
+=&gt; </span><span style="font-weight: normal"><span style="text-decoration: overline">r</span></span><span style="font-weight: normal">(</span><span style="font-weight: normal">0.</span><span style="font-weight: normal">7</span><span style="font-weight: normal">)<br/>
+	</span><span style="font-weight: normal"><span style="text-decoration: overline">x</span></span><span style="font-weight: normal">(0.</span><span style="font-weight: normal">7</span><span style="font-weight: normal">)=</span><span style="font-weight: normal">a</span><sub><span style="font-weight: normal">2</span></sub><span style="font-weight: normal">1</span><sup><span style="font-weight: normal">2</span></sup><span style="font-weight: normal">+</span><span style="font-weight: normal">a</span><sub><span style="font-weight: normal">1</span></sub><span style="font-weight: normal">1</span><span style="font-weight: normal">+a</span><sub><span style="font-weight: normal">0</span></sub><span style="font-weight: normal">=</span><span style="font-weight: normal">5=
+</span><span style="font-weight: normal">a</span><sub><span style="font-weight: normal">2</span></sub><span style="font-weight: normal">0.7</span><sup><span style="font-weight: normal">2</span></sup><span style="font-weight: normal">+</span><span style="font-weight: normal">a</span><sub><span style="font-weight: normal">1</span></sub><span style="font-weight: normal">0.7</span><span style="font-weight: normal">+</span><span style="font-weight: normal">1=5</span><span style="font-weight: normal"><br/>
+	</span><span style="font-weight: normal"><span style="text-decoration: overline">y</span></span><span style="font-weight: normal">(0.</span><span style="font-weight: normal">7</span><span style="font-weight: normal">)=</span><span style="font-weight: normal">b</span><sub><span style="font-weight: normal">2</span></sub><span style="font-weight: normal">1</span><sup><span style="font-weight: normal">2</span></sup><span style="font-weight: normal">+</span><span style="font-weight: normal">b</span><sub><span style="font-weight: normal">1</span></sub><span style="font-weight: normal">1</span><span style="font-weight: normal">+b</span><sub><span style="font-weight: normal">0</span></sub><span style="font-weight: normal">=</span><span style="font-weight: normal">2=
+</span><span style="font-weight: normal">b</span><sub><span style="font-weight: normal">2</span></sub><span style="font-weight: normal">0.7</span><sup><span style="font-weight: normal">2</span></sup><span style="font-weight: normal">+</span><span style="font-weight: normal">b</span><sub><span style="font-weight: normal">1</span></sub><span style="font-weight: normal">0.7</span><span style="font-weight: normal">+</span><span style="font-weight: normal">6=2</span><span style="font-weight: normal">	<br/>
+</span><span style="font-weight: normal">t=</span><span style="font-weight: normal">1</span><span style="font-weight: normal">
+=&gt; </span><span style="font-weight: normal"><span style="text-decoration: overline">r</span></span><span style="font-weight: normal">(</span><span style="font-weight: normal">1</span><span style="font-weight: normal">)<br/>
+	</span><span style="font-weight: normal"><span style="text-decoration: overline">x</span></span><span style="font-weight: normal">(</span><span style="font-weight: normal">1</span><span style="font-weight: normal">)=</span><span style="font-weight: normal">
+</span><span style="font-weight: normal">a</span><sub><span style="font-weight: normal">2</span></sub><span style="font-weight: normal">1</span><sup><span style="font-weight: normal">2</span></sup><span style="font-weight: normal">+</span><span style="font-weight: normal">a</span><sub><span style="font-weight: normal">1</span></sub><span style="font-weight: normal">1</span><span style="font-weight: normal">+a</span><sub><span style="font-weight: normal">0</span></sub><span style="font-weight: normal">=</span><span style="font-weight: normal">7</span><span style="font-weight: normal"><br/>
+	</span><span style="font-weight: normal"><span style="text-decoration: overline">y</span></span><span style="font-weight: normal">(</span><span style="font-weight: normal">1</span><span style="font-weight: normal">)=</span><span style="font-weight: normal">
+</span><span style="font-weight: normal">b</span><sub><span style="font-weight: normal">2</span></sub><span style="font-weight: normal">1</span><sup><span style="font-weight: normal">2</span></sup><span style="font-weight: normal">+</span><span style="font-weight: normal">b</span><sub><span style="font-weight: normal">1</span></sub><span style="font-weight: normal">1</span><span style="font-weight: normal">+b</span><sub><span style="font-weight: normal">0</span></sub><span style="font-weight: normal">=</span><span style="font-weight: normal">4</span></p>
+<p><span style="font-weight: normal">t</span><span style="font-weight: normal">=0.7
+és t=1 alapján egyenetrendszer, ami a maradék ismeretleneket
+megadja</span></p>
+<p><b>P</b><b>ontok alapján történő ábrázolás</b></p>
+<p style="font-weight: normal">n darab pontra fektetek görbét,
+tehát megadok n db (x<sub>i</sub>, y<sub>i</sub>) koordinátájú
+pontot. Vektoros ábrázoláshoz megadom a t<sub>i</sub> értékeit
+úgy, hogy a t<sub><b>i</b></sub> görbepont éppen az (x<sub>i</sub>,y<sub>i</sub>)
+pontra essen. Ennek a görbének az egyenletét keressük.</p>
+<p style="font-weight: normal">Egyenlet megoldásához szükség van
+az egyenletek fokszámának meghatározására: n db ponthoz n-1-ed
+fokú polinomra van szükség.</p>
+<p style="font-weight: normal">Görbe: 
+<span style="text-decoration: overline">r</span>(t)<br/>
+	<span style="text-decoration: overline">x</span>(t)=a<sub>n-1</sub>t<sup>n-1</sup>+a<sub>n-2</sub>t<sup>n-2</sup>+...+a<sub>1</sub>t+a<sub>0</sub><br/>
+	<span style="text-decoration: overline">y</span>(t)=b<sub>n-1</sub>t<sup>n-1</sup>+b<sub>n-2</sub>t<sup>n-2</sup>+...+b<sub>1</sub>t+b<sub>0</sub></p>
+<p style="font-weight: normal">egyenletek pontonként, ahol ti-t
+ismerem:</p>
+<p style="font-weight: normal">
+<span style="text-decoration: overline">r</span>(t<sub>1</sub>)<br/>
+	<span style="text-decoration: overline">x</span>(t<sub>1</sub>)=x<sub>1</sub>=a<sub>n-1</sub>t<sub>1</sub><sup>n-1</sup>+a<sub>n-2</sub>t<sub>1</sub><sup>n-2</sup>+...+a<sub>1</sub>t<sub>1</sub>+a<sub>0</sub><br/>
+	<span style="text-decoration: overline">y</span>(t<sub>1</sub>)=y<sub>1</sub>=b<sub>n-1</sub>t<sub>1</sub><sup>n-1</sup>+b<sub>n-2</sub>t<sub>1</sub><sup>n-2</sup>+...+b<sub>1</sub>t<sub>1</sub>+b<sub>0</sub></p>
+<p style="font-weight: normal">
+<span style="text-decoration: overline">r</span>(t<sub>2</sub>)<br/>
+	<span style="text-decoration: overline">x</span>(t<sub>2</sub>)=x<sub>2</sub>=a<sub>n-1</sub>t<sub>2</sub><sup>n-1</sup>+a<sub>n-2</sub>t<sub>2</sub><sup>n-2</sup>+...+a<sub>1</sub>t<sub>2</sub>+a<sub>0</sub><br/>
+	<span style="text-decoration: overline">y</span>(t<sub>2</sub>)=y<sub>2</sub>=b<sub>n-1</sub>t<sub>2</sub><sup>n-1</sup>+b<sub>n-2</sub>t<sub>2</sub><sup>n-2</sup>+...+b<sub>1</sub>t<sub>2</sub>+b<sub>0</sub></p>
+<p style="font-weight: normal">
+<span style="text-decoration: overline">r</span>(t<sub>n</sub>)<br/>
+	<span style="text-decoration: overline">x</span>(t<sub>n</sub>)=x<sub>n</sub>=a<sub>n-1</sub>t<sub>n</sub><sup>n-1</sup>+a<sub>n-2</sub>t<sub>n</sub><sup>n-2</sup>+...+a<sub>1</sub>t<sub>n</sub>+a<sub>0</sub><br/>
+	<span style="text-decoration: overline">y</span>(t<sub>n</sub>)=y<sub>n</sub>=b<sub>n-1</sub>t<sub>n</sub><sup>n-1</sup>+b<sub>n-2</sub>t<sub>n</sub><sup>n-2</sup>+...+b<sub>1</sub>t<sub>n</sub>+b<sub>0</sub></p>
+<p style="font-weight: normal"><br/>
+<br/>
+
+</p>
+<p style="font-weight: normal">n pont esetén (n-1)×2 egyenlet,
+melyek megoldása behelyettesítéssel nem megvalósítható.<br/>
+Megoldása
+<span style="text-decoration: none"><b>Lagrange-interpoláció</b></span>val
+(megadott pontokon átmenő görbe egyenlete):</p>
+<p style="font-weight: normal">a<sub>0</sub>, a<sub>1</sub>, …,
+a<sub>n-1</sub>, és b<sub>0</sub>, b<sub>1</sub>,…, b<sub>n-1</sub>
+skalárok, melyekkel a görbe felírható így:<br/>
+
+<span style="text-decoration: overline">r</span>(t)<br/>
+	<span style="text-decoration: overline">x</span>(t)=a<sub>n-1</sub>t<sup>n-1</sup>+a<sub>n-2</sub>t<sup>n-2</sup>+...+a<sub>1</sub>t+a<sub>0</sub><br/>
+	<span style="text-decoration: overline">y</span>(t)=b<sub>n-1</sub>t<sup>n-1</sup>+b<sub>n-2</sub>t<sup>n-2</sup>+...+b<sub>1</sub>t+b<sub>0</sub></p>
+<p style="font-weight: normal">Megoldása Gauss eliminációval (átló
+alatt kinullázom). N db ismeretlen és n db független egyenlet
+esetén kapok csak egyértelmű megoldást (jól meghatározott).
+Kevesebb egyenlet esetén végtelen sok megoldás (alulhatározott),
+több esetén nem tudom az összes egyenletet igazzá tenni, tehát
+nincs megoldás(túlhatározott). Mivel ez polinom, ezért gyorsan és
+pontosan dolgozhatok vele, viszont paraméterezése nehézkes,
+emellett oszcillál, tehát ha a görbe közepén egy egyenes van,
+akkor a pontok az egyenes körül oszcillálva hullámot adnak.</p>
+<p style="font-weight: normal"><u>Módszerek paraméterek
+hozzárendelésére a pontokhoz:</u></p>
+<p style="font-weight: normal">1. Uniform módszer: [0,1]
+intervallumot egyenlő részekre osztjuk. Maga alá görbülő
+görbékre nem alkalmazható.<br/>
+2. Húrhossz szerinti
+paraméterezés: intervallum felosztása a pontok távolságának
+arányában.</p>
+<p style="text-decoration: none"><b>Hermite-ív:</b></p>
+<p style="font-weight: normal">Ha a görbém egy része egyenes,
+akkor tudnom kell, hogy adott ponton merre tartson a görbe. Ehhez 
+az adott pont érintőjére van szükség, tehát pontonként
+függvényre és deriváltra is szükség van. Mivel 2 megadott pont
+esetén 4 feltétel teljesül (2 pont és 2 vektor), 3-adfokú
+polinomra van szükség 2 pontra fektetett görbe esetén.</p>
+<p style="font-weight: normal">1-1 harmadfokú polinommal megadott
+koordináta függvényt keresünk az alábbi alakban:</p>
+<p style="font-weight: normal">  <span style="text-decoration: overline">r</span>(t)<br/>
+	<span style="text-decoration: overline">x</span>(t)<br/>
+	<span style="text-decoration: overline">y</span>(t)</p>
+<p style="font-weight: normal">Ehhez adottak:<br/>
+P<sub>0</sub>(p<sub>0</sub>x,
+p<sub>0</sub>y) 	<span style="text-decoration: overline">v</span><sub>0</sub>(v<sub>0</sub>x,
+v<sub>0</sub>y)<br/>
+P<sub>1</sub>(p<sub>1</sub>x, p<sub>1</sub>y)
+	<span style="text-decoration: overline">v</span><sub><span style="text-decoration: none">1</span></sub>(v<sub>1</sub>x,
+v<sub>1</sub>y)</p>
+<p style="font-weight: normal">Feltételek:<br/>
+<span style="text-decoration: overline">r</span>(0)=
+P<sub>0 </sub>	→	x(0)= p<sub>0</sub>x	y(0)= p<sub>0</sub>y<br/>
+<span style="text-decoration: overline">r</span>(1)=
+P<sub>1</sub><sub> </sub>	→	x(1)= p<sub>1</sub>x	y(1)= p<sub>1</sub>y<br/>
+<span style="text-decoration: overline">r'</span>(0)=
+<span style="text-decoration: overline">v</span><sub>0</sub>	→	x'(0)=
+v<sub>0</sub>x	y'(0)= v<sub>0</sub>y<br/>
+<span style="text-decoration: overline">r'</span>(1)=
+<span style="text-decoration: overline">v</span><sub><span style="text-decoration: none">1</span></sub><sub>
+</sub>	→	x'(1)= v<sub>1</sub>x	y'(1)= v<sub>1</sub>y</p>
+<p style="font-weight: normal">Polinomiális függvényeket keresünk,
+koordináta függvényenként 4 ismeretlenünk van, tehát összesen
+4 egyenletet
+keresünk.<br/>
+<span style="text-decoration: overline">r</span>(t)<br/>
+	<span style="text-decoration: none">x</span>(t)=a<sub>3</sub>t<sup>3</sup>+a<sub>2</sub>t<sup>2</sup>+a<sub>1</sub>t+a<sub>0</sub><br/>
+	<span style="text-decoration: none">y</span>(t)=b<sub>3</sub>t<sup>3</sup>+b<sub>2</sub>t<sup>2</sup>+b<sub>1</sub>t+b<sub>0</sub></p>
+<p style="font-weight: normal"><span style="text-decoration: overline">r'</span>(t)<br/>
+	<span style="text-decoration: none">x'(</span>t)=<sub>
+</sub>a<sub>3</sub>×3t<sup>2</sup>+a<sub>2</sub>×2t+a<sub>1</sub><br/>
+	<span style="text-decoration: none">y'</span>(t)=b<sub>3</sub>×3t<sup>2</sup>+b<sub>2</sub>×2t+b<sub>1</sub></p>
+<p style="font-weight: normal">x a 0 helyen vegye fel az általunk
+megadott koordinátát:</p>
+<p style="font-weight: normal">x(0)= p<sub>0</sub>x →	<b>a</b><sub><b>0</b></sub><b>=
+</b><b>p</b><sub><b>0</b></sub><b>x</b><br/>
+x(1)= p<sub>1</sub>x
+→	a<sub>3</sub>+a<sub>2</sub>+a<sub>1</sub>+a<sub>0</sub>=p<sub>1</sub>x<br/>
+x'(0)=
+v<sub>0</sub>x → 	<b>a</b><sub><b>1</b></sub><b>= </b><b>p</b><sub><b>1</b></sub><b>x</b><br/>
+x'(1)=
+v<sub>1</sub>x →	3a<sub>3</sub>+2a<sub>2</sub>+a<sub>1</sub>=v<sub>1</sub>x</p>
+<p style="font-weight: normal">Megoldás:<br/>
+<span style="text-decoration: overline">r</span>(t)<br/>
+	<span style="text-decoration: none">x</span>(t)=(-2p<sub>1</sub>x+2p<sub>0</sub>x+v<sub>0</sub>x+v<sub>1</sub>x)×t<sup>3</sup>+(3p<sub>1</sub>x-3p<sub>0</sub>x-2v<sub>0</sub>x-v<sub>1</sub>x)×t<sup>2</sup>+v<sub>0</sub>x×t+p<sub>0</sub>x<br/>
+	<span style="text-decoration: none">y</span>(t)=(-2p<sub>1</sub>y+2p<sub>0</sub>y+v<sub>0</sub>y+v<sub>1</sub>y)×t<sup>3</sup>+(3p<sub>1</sub>y-3p<sub>0</sub>y-2v<sub>0</sub>y-v<sub>1</sub>y)×t<sup>2</sup>+v<sub>0</sub>y×t+p<sub>0</sub>y</p>
+<p style="font-weight: normal">Átalakítva pontokra és
+vektorokra:<br/>
+<span style="text-decoration: overline">r</span>(t)=(-2<span style="text-decoration: overline">p</span><sub>1</sub>+2<span style="text-decoration: overline">p</span><sub>0</sub>+<span style="text-decoration: overline">v</span><sub>0</sub>+<span style="text-decoration: overline">v</span><sub>1</sub>)×t<sup>3</sup>+(3<span style="text-decoration: overline">p</span><sub>1</sub>-3<span style="text-decoration: overline">p</span><sub>0</sub>-2<span style="text-decoration: overline">v</span><sub>0</sub>-<span style="text-decoration: overline">v</span><sub>1</sub>)×t<sup>2</sup>+<span style="text-decoration: overline">v</span><sub>0</sub>×t+<span style="text-decoration: overline">p</span><sub>0<br/>
+</sub><span style="text-decoration: overline">r</span>(t)=(2t<sup>3</sup>-3t<sup>2</sup>+1)<span style="text-decoration: overline">p</span><sub>0</sub>+(-2t<sup>3</sup>+3t<sup>2</sup>)<span style="text-decoration: overline">p</span><sub>1</sub>+(t<sup>3</sup>-2t<sup>2</sup>+t)<span style="text-decoration: overline">v</span><sub>0</sub>+(t<sup>3</sup>-t<sup>2</sup>)<span style="text-decoration: overline">v</span><sub>1<br/>
+</sub><span style="text-decoration: overline">r</span>(t)=H<sub>0</sub>(t)×<span style="text-decoration: overline">p</span><sub>0</sub>+H<sub>1</sub>(t)×<span style="text-decoration: overline">p</span><sub>1</sub>+H<sub>2</sub>(t)×<span style="text-decoration: overline">v</span><sub>0</sub>+H<sub>3</sub>(t)×<span style="text-decoration: overline">v</span><sub>1</sub></p>
+<p style="font-weight: normal">Computer grafikában minden görbe
+polinom, paraméteres előállítású, ahol geometriai adatokat
+(pontok és érintők) szorzunk meg polinomokkal.<br/>
+Hermite-ív
+problémái: hosszú vektor esetén visszahúzódás, és nem lehet
+megjósolni mekkora vektornál torzul el a görbe.</p>
+<p style="font-weight: normal"><b>B</b><b>ézier görbe</b></p>
+<p style="font-weight: normal">Ennek a továbbfejlesztése a <b>Bézier
+görbe</b>, ahol vektorok helyett újabb pontokkal kontrollálom a
+görbét, ezek a kontroll pontok. 4 pont határoz meg egy
+töröttvonalat, mivel a 2 kiegészítő pont is a körülbelüli
+haladást mutatja.</p>
+<p style="font-weight: normal">Hermite-ívhez képest:</p>
+<p style="font-weight: normal"><span style="text-decoration: overline">v</span><sub>0</sub>=3(P<sub>1</sub>-P<sub>0</sub>)</p>
+<p style="font-weight: normal"><span style="text-decoration: overline">v</span><sub>1</sub>=3(P<sub>3</sub>-P<sub>2</sub>)</p>
+<p style="font-weight: normal"><span style="text-decoration: overline">r</span>(t)=(2t<sup>3</sup>-3t<sup>2</sup>+1)<span style="text-decoration: overline">p</span><sub>0</sub>+(-2t<sup>3</sup>+3t<sup>2</sup>)<span style="text-decoration: overline">p</span><sub>3</sub>+(t<sup>3</sup>-2t<sup>2</sup>+t)×3(<span style="text-decoration: overline">p</span><sub>1</sub>-<span style="text-decoration: overline">p</span><sub>0</sub>)+(t<sup>3</sup>-t<sup>2</sup>)<span style="text-decoration: none">×3(</span><span style="text-decoration: overline">p</span><sub><span style="text-decoration: none">3</span></sub><span style="text-decoration: none">-</span><span style="text-decoration: overline">p</span><sub><span style="text-decoration: none">2</span></sub><span style="text-decoration: none">)</span></p>
+<p style="font-weight: normal"><span style="text-decoration: overline">r</span><span style="text-decoration: none">(t)=(</span><sup><font size="4" style="font-size: 16pt"><span style="text-decoration: none">3</span></font></sup><sub><font size="4" style="font-size: 16pt"><span style="text-decoration: none">0</span></font></sub><span style="text-decoration: none">)</span><span style="text-decoration: none">t</span><sup><span style="text-decoration: none">0</span></sup><span style="text-decoration: none">
+(1-t)</span><sup><span style="text-decoration: none">3</span></sup><span style="text-decoration: overline">p</span><sub><span style="text-decoration: none">0</span></sub><span style="text-decoration: none">+(</span><sup><font size="4" style="font-size: 16pt"><span style="text-decoration: none">3</span></font></sup><sub><font size="4" style="font-size: 16pt"><span style="text-decoration: none">1</span></font></sub><span style="text-decoration: none">)</span><span style="text-decoration: none">t</span><sup><span style="text-decoration: none">1</span></sup><span style="text-decoration: none">
+(1-t)</span><sup><span style="text-decoration: none">2</span></sup><span style="text-decoration: overline">p</span><sub><span style="text-decoration: none">1</span></sub><span style="text-decoration: none">+(</span><sup><font size="4" style="font-size: 16pt"><span style="text-decoration: none">3</span></font></sup><sub><font size="4" style="font-size: 16pt"><span style="text-decoration: none">2</span></font></sub><span style="text-decoration: none">)</span><span style="text-decoration: none">t</span><sup><span style="text-decoration: none">2</span></sup><span style="text-decoration: none">
+(1-t)</span><sup><span style="text-decoration: none">1</span></sup><span style="text-decoration: overline">p</span><sub><span style="text-decoration: none">2</span></sub><span style="text-decoration: none">+(</span><sup><font size="4" style="font-size: 16pt"><span style="text-decoration: none">3</span></font></sup><sub><font size="4" style="font-size: 16pt"><span style="text-decoration: none">3</span></font></sub><span style="text-decoration: none">)</span><span style="text-decoration: none">t</span><sup><span style="text-decoration: none">3</span></sup><span style="text-decoration: none">
+(1-t)</span><sup><span style="text-decoration: none">0</span></sup><span style="text-decoration: overline">p</span><sub><span style="text-decoration: none">3</span></sub></p>
+<p><b><span style="text-decoration: none">B</span><span style="text-decoration: none">é</span><span style="text-decoration: none">zier
+görbe n+1 darab pontra</span></b><span style="font-weight: normal"><span style="text-decoration: none">
+n-edfokú polinomokkal:</span></span></p>
+<p style="font-weight: normal"><span style="text-decoration: overline">r</span><span style="text-decoration: none">(t)=(</span><sup><font size="4" style="font-size: 16pt"><span style="text-decoration: none">n</span></font></sup><sub><font size="4" style="font-size: 16pt"><span style="text-decoration: none">0</span></font></sub><span style="text-decoration: none">)</span><span style="text-decoration: none">t</span><sup><span style="text-decoration: none">0</span></sup><span style="text-decoration: none">
+(1-t)</span><sup><span style="text-decoration: none">n</span></sup><span style="text-decoration: overline">p</span><sub><span style="text-decoration: none">0</span></sub><span style="text-decoration: none">+(</span><sup><font size="4" style="font-size: 16pt"><span style="text-decoration: none">n</span></font></sup><sub><font size="4" style="font-size: 16pt"><span style="text-decoration: none">1</span></font></sub><span style="text-decoration: none">)</span><span style="text-decoration: none">t</span><sup><span style="text-decoration: none">1</span></sup><span style="text-decoration: none">
+(1-t)</span><sup><span style="text-decoration: none">n-1</span></sup><span style="text-decoration: overline">p</span><sub><span style="text-decoration: none">1</span></sub><span style="text-decoration: none">+...</span><span style="text-decoration: none">+</span><span style="text-decoration: none">(</span><sup><font size="4" style="font-size: 16pt"><span style="text-decoration: none">n</span></font></sup><sub><font size="4" style="font-size: 16pt"><span style="text-decoration: none">n-1</span></font></sub><span style="text-decoration: none">)</span><span style="text-decoration: none">t</span><sup><span style="text-decoration: none">n-1</span></sup><span style="text-decoration: none">
+(1-t)</span><sup><span style="text-decoration: none">1</span></sup><span style="text-decoration: overline">p</span><sub><span style="text-decoration: none">n-1</span></sub><span style="text-decoration: none">+(</span><sup><font size="4" style="font-size: 16pt"><span style="text-decoration: none">n</span></font></sup><sub><font size="4" style="font-size: 16pt"><span style="text-decoration: none">n</span></font></sub><span style="text-decoration: none">)</span><span style="text-decoration: none">t</span><sup><span style="text-decoration: none">n</span></sup><span style="text-decoration: none">
+(1-t)</span><sup><span style="text-decoration: none">n</span></sup><span style="text-decoration: overline">p</span><sub><span style="text-decoration: none">n<br/>
+</span></sub><br/>
+<br/>
+
+</p>
+<p style="font-weight: normal"><span style="text-decoration: overline">r</span><span style="text-decoration: none">(t)</span><span style="text-decoration: none">=</span><font face="Liberation Serif, serif"><font size="6" style="font-size: 28pt"><span style="text-decoration: none">Σ</span></font></font><sub><font face="Liberation Serif, serif"><font size="5" style="font-size: 20pt"><span style="text-decoration: none">i=0</span></font></font></sub><sup><font face="Liberation Serif, serif"><font size="6" style="font-size: 28pt"><span style="text-decoration: none">n
+</span></font></font></sup><font face="Liberation Serif, serif"><font size="6" style="font-size: 28pt"><span style="text-decoration: none">(</span></font></font><sup><font face="Liberation Serif, serif"><font size="6" style="font-size: 28pt"><span style="text-decoration: none">n</span></font></font></sup><sub><font face="Liberation Serif, serif"><font size="6" style="font-size: 28pt"><span style="text-decoration: none">i</span></font></font></sub><font face="Liberation Serif, serif"><font size="6" style="font-size: 28pt"><span style="text-decoration: none">)</span></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="text-decoration: none">t</span></font></font><sup><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="text-decoration: none">i</span></font></font></sup><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="text-decoration: none">(1-t)</span></font></font><sup><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="text-decoration: none">n-i</span></font></font></sup><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="text-decoration: none">×</span></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="text-decoration: overline">p</span></font></font><sub><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="text-decoration: none">i</span></font></font></sub></p>
+<h2 class="western">Felületek leírása és számítógépes
+ábrázolása.</h2>
+<p>1. <b>explicit</b> előállítás z=f(x,y)<br/>
+minden (x,y)
+pontra ad egy z értéket. R×R→R <br/>
+x,y síkon megkeresem a
+pontot, majd z irányába tolom.<br/>
+1. összes x-et
+behelyettesítem, y=0<br/>
+2. összes y-t behelyettesítem, x=0<br/>
+3.
+a többi pontot is behelyettesítem, kiszámolom<br/>
+Dróthálós
+megjelenítés:<br/>
+Minden pontot ábrázolni kell, mert a köztes
+pontokat nem határozzák meg a szélsők.<br/>
+Így a felületi
+görbéket ábrázolom, nem magát a felületet<br/>
+Előny: könnyű
+ábrázolás<br/>
+Hátrány: maga alá görbülő felületet nem tud
+ábrázolni</p>
+<p>2. <b>implicit</b> F(x,y,z) = 0<br/>
+1 (x,y) értékhez több z
+érték társul, tehát egymás alá görbül a felület.<br/>
+A pont
+3 koordinátája egy nagy egyenletben egyesül. Azok a pontok vannak
+a felületen, ahol kiértékelés során 0-t kapunk.<br/>
+Előnye:
+maga alá görbülő felületet is tud ábrázolni<br/>
+Hátránya:
+pontonkénti kiértékelés<br/>
+Ha adott az F(x,y,z) n-edfokú
+polinom, akkor az F(x,y,z)=0 egyenletet kielégítő pontok
+összességét n-edrendű (vagy algebrai) felületnek nevezzük.</p>
+<p>Pl n=1: ax+by+cz+d=0 egy sík<br/>
+    n=2:
+ax<sup>2</sup>+by<sup>2</sup>+cz<sup>2</sup>+dxy+exz+fyz+gx+hy+jz+k =
+0, ahol dxy,exz és fyz is másodfokú tagok, teház ha nincs
+x<sup>2</sup>,y<sup>2</sup>,z<sup>2</sup>, akkor is
+másodfokú.<br/>
+Metszéspontok: felület+görbe, felület+felület.
+<br/>
+Egy n-edrendű felületnek és egy m-edrendű görbének n×m
+látható metszéspontja lehet. Tehát egy felület egyenletének
+fokszámát eldönthetem úgy, hogy egyenessel metszem, és a
+metszéspontok száma megadja a felület egyenletének fokszámát.<br/>
+Egy
+n-edrendű és egy m-edrendű felület metszésvonala egy m×n-edrendű
+görbe.</p>
+<p>3. <b>paraméteres</b> megadás<br/>
+<span style="font-weight: normal"><span style="text-decoration: overline">r</span></span><span style="font-weight: normal">:
+[a,b]</span><span style="font-weight: normal">×[c,d] (a két
+időintervallum Descartes szorzata)</span><span style="font-weight: normal">→V</span><sup><span style="font-weight: normal">3</span></sup><span style="font-weight: normal"><br/>
+</span><span style="font-weight: normal">x</span><span style="font-weight: normal">:
+[a,b]</span><span style="font-weight: normal">×[c,d] </span><span style="font-weight: normal">→</span><span style="font-weight: normal">R,
+</span><span style="font-weight: normal"><span style="text-decoration: none">y</span></span><span style="font-weight: normal">:
+[a,b]</span><span style="font-weight: normal">×[c,d] </span><span style="font-weight: normal">→</span><span style="font-weight: normal">R,
+</span><span style="font-weight: normal"><span style="text-decoration: none">z</span></span><span style="font-weight: normal">:
+[a,b]</span><span style="font-weight: normal">×[c,d] </span><span style="font-weight: normal">→</span><span style="font-weight: normal">R<br/>
+Míg
+a görbék ábrázolása során pontokat kötök össze, itt
+paraméter vonalakkal rácsozom be<br/>
+Lépései ([a,b]
+intervallumot az u tengelyen, [c,d] intervallumot a v tengelyen
+ábrázolva): <br/>
+1. u értéke fix, a v értéke pedig c-ről d-re
+egységenként nő. (1. paraméter állandó, 2. változó)
+Eredményei pontok, amelyeket összekötve görbét kapok<br/>
+2. új,
+de szintén fix u érték, míg a-ból b-be nem érünk (az
+intervallumokon minél kisebb a lépték, annál simább a felület,
+annál pontosabb a végeredmény)<br/>
+3. az első 2 lépést a v
+értékein is megismételni</span></p>
+<p><span style="font-weight: normal">E</span><span style="font-weight: normal">lőnyök,
+hátrányok (implicit vs paraméteres)</span></p>
+<p style="font-weight: normal">			IMPLICIT						PARAMÉTERES</p>
+<p style="font-weight: normal">MEGJELENÍTÉS		-							+</p>
+<p style="font-weight: normal">KOORDINÁTA	+, behelyettesítés
+után				–, 3 egyenletből álló<br/>
+ILLESZKEDÉSE	0 eredmény
+rajta van					2 ismeretlenes <br/>
+A FELÜLETRE	nem 0,
+nincs						egyenletrendszer</p>
+<p style="font-weight: normal">Előfordul, hogy az egyik implicit, a
+másik paraméteres formában jó.</p>
+<p style="font-weight: normal">Felület érzékeltetése:
+rácsvonalakkal, színezéssel, szintvonalakkal</p>
+<p style="text-decoration: none"><br/>
+<br/>
+
+</p>
+<h2 class="western" style="page-break-before: always">Problémák
+reprezentálása állapottéren. A megoldás keresése
+visszalépéssel. Szisztematikus és heurisztikus gráfkereső
+eljárások: a szélességi, a mélységi és az A algoritmusok.
+Kétszemélyes játékok és reprezentálásuk. A nyerő stratégia.
+Lépésajánló algoritmusok.</h2>
+<h2 class="western">Problémák reprezentálása állapottéren. 
+</h2>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">A
+mesterséges intelligencia problémáinak megoldása a probléma
+meg-fogalmazásával kezdődik: a problémát leírjuk,reprezentáljuk.
+Az egyik legelterjedtebb reprezentációs technika az
+állapottér-reprezentáció(state space representation).</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Legyen
+adott egy probléma, amit jelöljünk p-vel.</font></font></p>
+<p>•<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Megkeressük
+p világának legalább egy, de véges sok – a problémamegoldása
+során fontosnak vélt – meghatározóját.(pl. objektum, pozíció,
+méret, hőmérséklet, szín, stb) Tegyük fel, hogy milyen
+jellemzőt találtunk.</font></font></p>
+<p>•<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Minden
+egyes jellemző p világát különböző értékekkel jellemzi.(pl.
+szín: fekete/fehér; hőmérséklet:[−20◦,40◦], stb) Ha a
+megadott jellemzők épp rendre a h1, . . . , hm értékekkel
+ren-delkeznek azt mondjuk, hogy p világa a (h1, . . . , hm)
+értékm-essel leírt állapotban(state) van. A világunk
+állapotainak halmaza az állapottér(state space).</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Jelölje
+az i-edik jellemző által felvehető értékek halmazát Hi(i=1, . .
+. , m). Ekkor p állapotai elemei a H1×···×Hm halmaznak. Azokat
+a feltételeket, amelyek meghatározzák, hogy ebből a halmazból
+mely értékm-esek állapotok, kényszerfeltételeknek nevezzük. Az
+állapottér tehát az értékhalmazok Descartes-szorzatának a
+kényszerfeltételekkel kijelölt részhalmaza: A={a|a ∈ H1×···×Hm
+és kényszerfeltétel(a)}</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Az
+A állapottér azon állapotát, amit a probléma világa
+jellemzőinek kezdőértékei határoznak meg, kezdőállapotnak
+(initial state) nevezzük és kezdő-vel jelöljük. A
+kezdőállapotból kiindulva a probléma világának sorban előálló
+állapotait rendre meg szeretnénk változtatni, míg végül
+valamely számunkra megfelelő ún. célállapotba(goal state)
+jutunk. Jelölje C ⊆A a célállapotok halmazát. Megadása
+kétféleképpen történhet:</font></font></p>
+<p>•<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">felsorolással:
+C={c1, . . . , cl|ci∈A, i= 1, . . . , ℓ, ℓ≥1}</font></font></p>
+<p>•<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">célfeltételek
+megadásával: C={c|c∈A és célfeltételek(c)}Általában C ⊂ A,
+hiszen kezdő/∈ C, különben nincs megoldandó feladat.</font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Hogy
+célállapotba juthassunk, meg kell tudnunk változtatni bizonyos
+állapotokat. Az állapotváltozásokat leíró leképezéseket
+operátoroknak(operator) nevezzük. Nem minden operátor alkalmazható
+feltétlenül minden állapotra,ezért meg szoktuk adni az operátorok
+értelmezési tartományát az operátor alkalmazási előfeltételek
+segítségével. Jelöljön az operátorok O véges halmazából o
+egy operátort. Ekkor Dom(o) ={a|a∈A és
+o-alkalmazásának-előfeltétele(a)} és Rng(o) ={o(a)|a∈Dom(o) és
+o(a)∈A}.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Legyen
+p egy probléma. Azt mondjuk, hogy a p problémát
+állapottér-reprezentáltuk, ha megadtuk az</font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN">〈</span></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">A,kezdő,C,O</font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN">〉</span></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">négyest,
+azaz</font></font></p>
+<p>•<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">az
+A!=∅halmazt, a probléma állapotterét,</font></font></p>
+<p>•<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">a
+kezdő ∈ A kezdőállapotot,</font></font></p>
+<p>•<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">a
+célállapotok C ⊂A halmazát és</font></font></p>
+<p>•<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">az
+operátorok O !=∅véges halmazát.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Jelölése:p=</font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN">〈</span></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">A,kezdő,C,O</font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN">〉</span></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">.</font></font></p>
+<h2 class="western">A megoldás keresése visszalépéssel. 
+</h2>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">A
+megoldást kereső rendszerek felépítése:</font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%">•<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Az
+adatbázis az állapottérgráfnak a keresés során előállított
+része, amit kiegészíthetünk a hatékony kereséshez szükséges
+bizonyos információkkal.</font></font></p>
+<p style="margin-bottom: 0cm; line-height: 100%">•<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">A
+műveletek módosítják az adatbázist, azaz az állapottérgráf
+adatbázisbeli részéből az állapottérgráf egy újabb (további)
+részét állítják elő. A rendszer
+alkalmazhat–állapottér-reprezentációs operátorokból
+származtatott műveleteket,–„technikai” műveleteket (pl.
+visszalépést). A műveleteknek is vannak végrehajtási
+feltételeik.</font></font></p>
+<p>•<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">A
+vezérlő irányítja a keresést. Megmondja, hogy a megoldáskeresés
+folyamán az adatbázisra, annak mely részén, mikor, melyik a
+végrehajtási feltételeknek eleget tevő művelet hajtódjon végre.
+Figyeli azt is, hogy befejeződhet-e a keresés, azaz–megvan-e a
+probléma megoldása,–vagy kiderült, hogy nem megoldható a
+probléma.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">1:procedure
+Kereső(</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〈</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">A,kezdő,C,O</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〉</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">)<br/>
+2:	adatbázis←Inicializál(kezdő)<br/>
+3:	while
+Igaz do<br/>
+4:		if Megoldás-Talál(adatbázis)
+then<br/>
+5:			break<br/>
+6:		end if<br/>
+7:		if
+Nem-Folytat(adatbázis) then <br/>
+8:			break<br/>
+9:		end
+if<br/>
+10:		művelet←Választ(adatbázis,műveletek)
+<br/>
+11:		adatbázis←Alkalmaz(adatbázis,művelet)<br/>
+12:	end
+while<br/>
+13:	if Megoldás-Talál(adatbázis)
+then<br/>
+14:		Megoldás-Kiír(adatbázis)<br/>
+15:	else<br/>
+16:		print„Sikertelen
+keresés”<br/>
+17:	end if<br/>
+18:end procedure</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Legyen
+p=</font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN">〈</span></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">A,
+kezd,C,O</font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN">〉</span></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">.
+Az alap visszalépéses megoldáskereső</font></font></p>
+<p>•<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">adatbázisa
+egy a startcsúcsból induló az ún. aktuális csúcsba vezető
+utat, az aktuális utat tartalmazza,az út csúcsait és a csúccsal
+kapcsolatban lévő éleket nyilvántartó csomópontokból épül
+fel. Egy csomópont az alábbi információkat tartalmazza:<br/>
+–egy
+ a∈A állapotot;<br/>
+–arra a csomópontra mutatót, mely a szülő
+állapotot (azt az állapotot, melyre operátort alkalmazva előállt
+a) tartalmazza;<br/>
+–azt az operátort, melyet a szülő állapotra
+alkalmazva előállt a;<br/>
+–a-ra a keresés során már
+alkalmazott (vagy még alkalmazható) operátorok halmazát.</font></font></p>
+<p>•<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">műveletei<br/>
+–
+az operátorokból származtatott műveletek: egy o operátor
+kiterjesztésével nyert művelet<br/>
+∗alkalmazási előfeltétele:
+az aktuális csomópont állapotára alkalmazható o, de még a
+keresés során erre az állapotra (ezen az úton) még nem
+alkalmaztuk.<br/>
+∗hatása:– a visszalépés<br/>
+∗alkalmazási
+előfeltétele: van (aktuális) csomópont az aktuális
+úton.<br/>
+∗hatása:</font></font></p>
+<p>•<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">vezérlője
+eldönti, hogy az adatbázisra mikor melyik műveletet kell
+végrehajtani, ha még nem teljesülnek a megállási feltételek.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">1:procedure
+Alap-Backtrack-1(</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〈</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">A,kezdő,C,O</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〉</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">)<br/>
+2:	Állapot[aktuális-csomópont]←kezdő<br/>
+3:	Szülő[aktuális-csomópont]←Nil<br/>
+4:	Operátor[aktuális-csomópont]←∗<br/>
+5:	Kipróbált[aktuális-csomópont]←∅<br/>
+6:	while
+Igaz do<br/>
+7:		if aktuális-csomópont=Nil then<br/>
+8			:break<br/>
+9:		end
+if<br/>
+10:		if Állapot[aktuális-csomópont]∈C
+then<br/>
+11:			break<br/>
+12:		end if<br/>
+13:		O′←{o|o∈O∧Előfeltétel
+(Állapot[aktuális-csomópont], o)∧o /∈
+Kipróbált[aktuális-csomópont]}<br/>
+14:		if O′!=∅ then
+<br/>
+15:			operátor←Választ(O′)<br/>
+16:			Kipróbált[aktuális-csomópont]←Kipróbált[aktuális-csomópont]
+∪
+{operátor}<br/>
+17:			Állapot[új]←Alkalmaz(Állapot[aktuális-csomópont],operátor)<br/>
+18:			Szülő[új]←aktuális-csomópont<br/>
+19:			Operátor[új]←operátor<br/>
+20:			Kipróbált[új]←∅<br/>
+21:			aktuális-csomópont←új<br/>
+22:		else<br/>
+23:			aktuális-csomópont←Szülő[aktuális-csomópont]<br/>
+24:		end
+if<br/>
+25:	end while<br/>
+26:	if aktuális-csomópont !=Nil
+then<br/>
+27:		Megoldás-Kiír(aktuális-csomópont)<br/>
+28:	else<br/>
+29:		print
+„Nincs megoldás”<br/>
+30:	end if<br/>
+31:end procedure</font></font></p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">1:procedure
+Alap-Backtrack-2(</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〈</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">A,kezdő,C,O</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〉</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">)<br/>
+2:	Állapot[aktuális-csomópont]←kezdő<br/>
+3:	Szülő[aktuális-csomópont]←Nil<br/>
+4:	Operátor[aktuális-csomópont]←∗<br/>
+5:	Alkalmazható[aktuális-csomópont]←{o|o∈O
+∧ Előfeltétel(Állapot[aktuális-csomópont], o)}<br/>
+6:	while
+Igaz do<br/>
+7:		if aktuális-csomópont=Nil then<br/>
+8:			break<br/>
+9:		end
+if<br/>
+10:		if Állapot[aktuális-csomópont]∈C
+then<br/>
+11:			break<br/>
+12:		end if<br/>
+13:		if
+Alkalmazható[aktuális-csomópont]!=∅
+then<br/>
+14:			operátor←Választ(Alkalmazható[aktuális-csomópont])<br/>
+15:			Alkalmazható[aktuális-csomópont]←Alkalmazható[aktuális-csomópont]\{operátor}<br/>
+16:			Állapot[új]←Alkalmaz(Állapot[aktuális-csomópont],operátor)<br/>
+17:			Szülő[új]←aktuális-csomópont<br/>
+18:			Operátor[új]←operátor<br/>
+19:			Alkalmazható[új]←{o|o∈O∧Előfeltétel(Állapot[új],
+o)}<br/>
+20:			aktuális-csomópont←új<br/>
+21:		else<br/>
+22:			aktuális-csomópont←Szülő[aktuális-csomópont]<br/>
+23:		end
+if<br/>
+24:	end while<br/>
+25:	if aktuális-csomópont!=Nil
+then<br/>
+26:		Megoldás-Kiír(aktuális-csomópont)<br/>
+27:	else<br/>
+28:		print
+„Nincs megoldás”<br/>
+29:	end if<br/>
+30:end procedure</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Ugyanazon
+probléma megoldásának keresése esetén a választás módjában
+lehet lényeges eltérés:</font></font></p>
+<p>•<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">irányítatlanul,
+szisztematikusan–előre rögzített operátorsorrend
+alapján–véletlenszerűen</font></font></p>
+<p>•<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">heurisztikusan:Becsüljük
+meg a h:A →R+heurisztikával, hogy az egyes csúcsok milyen távol
+vannak a hozzájuk legközelebbi terminális csúcstól. Legyen
+O′={o|o∈O∧o-alkalmazásának-előfeltétele(a)}. Azt az O′-beli
+operátort fogjuk alkalmazni a-ra, amelyik a becslésünk szerint a
+legközelebb visz valamelyik terminálishoz: h(operátor(a)) =
+min{h(o(a))|o∈O′}.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Az
+alap visszalépéses megoldáskeresők értékelése</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Teljesség:
+Ha a reprezentációs gráf köröket nem tartalmazó véges gráf,
+akkor az alap visszalépéses megoldáskereső véges sok keresőlépés
+megtétele után befejezi a keresést,</font></font></p>
+<p>•<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">ha
+van megoldás, előállít egy lehetséges megoldást,</font></font></p>
+<p>•<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">ha
+nincs megoldás, azt felismeri.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Tárigény:
+Kis méretű az adatbázis.</font></font></p>
+<h2 class="western">Szisztematikus és heurisztikus gráfkereső
+eljárások: a szélességi, a mélységi és az A algoritmusok. 
+</h2>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Legyen
+p=</font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN">〈</span></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">A,
+kezd,C,O</font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN">〉</span></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">.
+A keresőfával kereső rendszerek<br/>
+•adatbázisa a
+reprezentációs gráf már bejárt részét feszítő fa, az
+ún.keresőfa. A keresőfa csúcsait és a velük kapcsolatban lévő
+éleket (explicit vagy implicit módon) nyilvántartó csomópontok
+az alábbi információkat tartalmazzák:<br/>
+–egy a∈A
+állapotot;<br/>
+–arra a csomópontra mutatót, mely a szülő
+állapotot tartalmazza;<br/>
+–azt az operátort, melyet a szülő
+állapotra alkalmazva előállt a;<br/>
+–státusz:<br/>
+	∗zárt,
+ha a utódait tartalmazó csomópontokat a keresés során már
+előállítottuk;<br/>
+	∗nyílt, egyébként.</font></font></p>
+<p>•<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">művelete
+a kiterjesztés: a keresőfát annak egy nyílt csomópontján
+keresztül kibővíti.<br/>
+–alkalmazási előfeltétele: a
+keresőfában van nyílt csomópont.<br/>
+–hatása:<br/>
+	∗alkalmazzuk
+az összes alkalmazható operátort a nyílt csomópont
+állapotára,<br/>
+	∗az előálló állapotok közül<br/>
+		·amelyek
+még nem szerepeltek a keresőfa egyetlen csomópontjában sem,
+azokból a keresőfába felfűzött új nyílt csomó-pont
+készül,<br/>
+		·amelyek már szerepeltek a keresőfa valamely
+csomópontjában, azok sorsa keresőfüggő.<br/>
+	∗a kiterjesztett
+csomópont zárttá válik</font></font></p>
+<p>•<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">vezérlő
+megmondja, hogy melyik nyílt csomópont legyen a következő
+lépésben kiterjesztve.<br/>
+–Ha a kiválasztott nyílt csomópont
+állapota teljesíti a célfeltételeket, a keresőfában a szülőre
+mutatók mentén elő tudunk állítani egy megoldást is.<br/>
+–Nincs
+megoldás, ha egyetlenegy nyílt csomópont sincs a keresőfában</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">1:procedure
+Keresőfával-Kereső(</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〈</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">A,kezdő,C,O</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〉</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">)<br/>
+2:	Állapot[csomópont]←kezdő<br/>
+3:	Szülő[csomópont]←Nil<br/>
+4:	Operátor[csomópont]←∗<br/>
+5:	nyíltak←{csomópont};zártak←∅<br/>
+6:	while
+Igaz do<br/>
+7:		if nyíltak=∅ then<br/>
+8:			break<br/>
+9:		end
+if<br/>
+10:		csomópont←Választ(nyíltak)<br/>
+11:		if
+Állapot[csomópont]∈C then<br/>
+12:			break<br/>
+13:		end
+if<br/>
+14:		Kiterjeszt(csomópont,nyíltak,zártak)<br/>
+15:	end
+while<br/>
+16:	if nyíltak!=∅
+then<br/>
+17:		Megoldás-Kiír(csomópont)<br/>
+18:	else<br/>
+19:		print
+„Nincs megoldás”<br/>
+20:	end if<br/>
+21:end procedure</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Ugyanazon
+probléma megoldásának keresése esetén lényeges eltérés
+lehet<br/>
+1. a választás módjában. A vezérlő
+választhat<br/>
+	•irányítatlanul, szisztematikusan<br/>
+		–a
+csomópontok keresőgráfbeli mélysége alapján:szélességi és
+mélységi keresők;<br/>
+		–a csomópontok állapotait előállító
+költség alapján:optimális kereső;<br/>
+	•heurisztikusan:<br/>
+		–best-first
+algoritmus;<br/>
+		– A algoritmusok.<br/>
+2. abban, hogy mi
+történik, ha a keresőgráf egy csúcsához a keresés során újabb
+odavezető utat tár fel a vezérlő.<br/>
+3. a célfeltételek
+vizsgálatának időpontjában.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><b>Szélességi
+és mélységi keresők</b></font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">1.
+Egy csomópont előállításakor követjük, hogy a csomópontban
+nyilvántartott csúcs a keresőfában milyen „mélyen” van:</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">mélység(m)⇋{	0
+ha m=s<br/>
+			mélység(n) + 1 (n, m)∈E.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Kiterjesztésre<br/>
+•a
+szélességi kereső vezérlője a legkisebb mélységi számú<br/>
+•a
+mélységi kereső vezérlője a legnagyobb mélységi számú nyílt
+csomópontot választja ki.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">2.
+Ha a vezérlő a keresőgráf egy csúcsához a keresés során újabb
+odavezető utat tár fel, ezt nem tárolja, „elfelejti”.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">3.
+A tesztelést előre hozhatjuk.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">1:procedure
+Kiterjeszt(</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〈</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">A,kezdő,C,O</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〉</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">,csomópont,nyíltak,zártak)<br/>
+2:	for
+all o∈O do <br/>
+3:		if Előfeltétel(Állapot[csomópont],o)
+then<br/>
+4:			állapot←Alkalmaz(Állapot[csomópont],o)<br/>
+5:			ny←Keres(nyíltak,állapot)<br/>
+6:			z←Keres(zártak,állapot)<br/>
+7:			if
+ny=Nil and z=Nil
+then<br/>
+8:				Állapot[új-csomópont]←állapot<br/>
+9:				Szülő[új-csomópont]←csomópont<br/>
+10:				Operátor[új-csomópont]←o<br/>
+11:				Mélység[új-csomópont]←Mélység[csomópont]
++ 1<br/>
+12:				nyíltak←nyíltak∪{új-csomópont}<br/>
+13:			end
+if<br/>
+14:		end if<br/>
+15:	end
+for<br/>
+16:	nyíltak←nyíltak\{csomópont}<br/>
+17:	zártak←zártak∪{csomópont}<br/>
+18:end
+procedure<br/>
+19:procedure
+Szélességi-Kereső(</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〈</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">A,kezdő,C,O</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〉</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">)<br/>
+20:	Állapot[új-csomópont]←kezdő<br/>
+21:	Szülő[új-csomópont]←Nil<br/>
+22:	Operátor[új-csomópont]←∗<br/>
+23:	Mélység[új-csomópont]←0<br/>
+24:	nyíltak←{új-csomópont}<br/>
+25:	zártak←∅<br/>
+26:	while
+Igaz do<br/>
+27:		if nyíltak=∅ then<br/>
+28:			break<br/>
+29:		end
+if<br/>
+30:		csomópont←Választ({cs|cs∈nyíltak∧∧∀cs′(cs′∈nyíltak⊃Mélység[cs]≤Mélység[cs′])})<br/>
+31:		if
+Állapot[csomópont]∈C then <br/>
+32:			break<br/>
+33:		end
+if<br/>
+34:		Kiterjeszt(</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〈</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">A,kezdő,C,O</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〉</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">,csomópont,nyíltak,zártak)<br/>
+35:	end
+while<br/>
+36:	if nyíltak!=∅
+then<br/>
+37:		Megoldás-Kiír(csomópont)<br/>
+38:	else<br/>
+39:		print
+„Nincs megoldás”<br/>
+40:	end if<br/>
+41:end procedure</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">1:procedure
+Mélységi-Kereső(</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〈</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">A,kezdő,C,O</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〉</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">)<br/>
+2:	Állapot[új-csomópont]←kezdő<br/>
+3:	Szülő[új-csomópont]←Nil<br/>
+4:	Operátor[új-csomópont]←∗<br/>
+5:	Mélység[új-csomópont]←0<br/>
+6:	nyíltak←{új-csomópont}<br/>
+7:	zártak←∅<br/>
+8:	while
+Igaz do<br/>
+9:		if nyíltak=∅ then<br/>
+10:			break<br/>
+11:		end
+if<br/>
+12:		csomópont←Választ({cs|cs∈nyíltak∧∀cs′(cs′∈nyíltak⊃Mélység[cs]≥Mélység[cs′])})<br/>
+13:		if
+Állapot[csomópont]∈C then<br/>
+14:			break<br/>
+15:		end
+if<br/>
+16:		Kiterjeszt(</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〈</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">A,kezdő,C,O</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〉</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">,csomópont,nyíltak,zártak)<br/>
+17:	end
+while<br/>
+18:	if nyíltak!=∅
+then<br/>
+19:		Megoldás-Kiír(csomópont)<br/>
+20:	else<br/>
+21:		print
+„Nincs megoldás”<br/>
+22:	end if<br/>
+23:end procedure</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">A
+szélességi kereső értékelése<br/>
+Teljesség: A vezérlő,<br/>
+	•ha
+van megoldás, tetszőleges reprezentációs gráfban véges sok
+keresőlépés után előállít egy megoldást,<br/>
+	•ha nincs az
+adott reprezentációban megoldás, akkor véges gráfesetén azt a
+nyílt csomópontok elfogyásával felismeri.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Optimalitás:
+Ha van megoldás, tetszőleges reprezentációs gráfban a vezérlő
+a legrövidebb megoldást állítja elő.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Tárigény:
+Nagy az adatbázis. Legyen a reprezentációs fa minden csúcsának d
+gyermeke, és l hosszúságú a legrövidebb megoldás. Ekkor a
+keresőgráf csomópontjainak száma a keresés végére (a
+legrosszabb esetben):1 +d+d<sup>2</sup>+d<sup>3</sup>+. .
+.+d<sup>l+1</sup>−d≈O(d<sup>l+1</sup>).</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">A
+mélységi kereső értékelése<br/>
+Teljesség: A vezérlő véges
+reprezentációs gráfban,<br/>
+	•ha van megoldás, véges sok
+keresőlépés után előállít egy megoldást,<br/>
+	•ha nincs a
+problémának az adott reprezentációban megoldása,akkor azt a
+nyílt csomópontok elfogyásával felismeri.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">A
+nyílt csomópontokat gyakran<br/>
+•a szélességi kereső
+sorban,<br/>
+•a mélységi kereső veremben <br/>
+tartja nyilván,
+melyből mélységi szám szerint ezek épp megfelelő sorrendben
+kerülnek ki.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Rákérdezhetnek
+az optimális keresőre is amely mélység helyett (legkisebb)
+útköltség alapján választ. (költség: a gráf 2 csúcsát
+összekötő él/út költsége, az útköltség pedig a már bejárt
+út csúcsait összekötő élek összköltsége)</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">útköltség(m)⇋{	0
+ha m=s <br/>
+			útköltség(n) +költség(n, m) (n, m)∈E.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><b>Az
+A algoritmus</b></font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">1.
+A keresőgráf minden csomópontjában megbecsüljük a rajta
+keresztülhaladó megoldás költségét. Ez egyrészt a csomópontig
+vezető nyilvántartott út költsége, amihez hozzászámítjuk a
+célig hátralevő út becsült költségét: összköltség(m)
+=útköltség(m) +heurisztika(m), azaz <br/>
+összköltség(m)
+=útköltség(n) +költség(n, m) +heurisztika(m), ha (n, m)∈E. <br/>
+Ha
+összköltség∗(m)-mel jelöljük azmcsúcson ke-resztül célba
+jutás optimális költségét, akkor minden m csúcsra
+összköltség∗(m)≈összköltség(m)<br/>
+Kiterjesztésre az A
+algoritmus vezérlője a legkisebb összköltségű nyílt
+csomópontot választja ki.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">2.
+Ha a vezérlő a keresőgráf egy csúcsához a keresés során újabb
+odavezető utat tár fel, azaz az n csomópont kiterjesztéskor
+előállt állapot szerepel már a keresőgráf m csomópontjában,
+és az útköltség(n) +költség(n, m)&lt;útköltség(m), ekkor az
+új kisebb költségű utat tároljuk, a régit „elfelejtjük”.<br/>
+•Ha
+m nyílt volt, más teendő nincs.<br/>
+•Ha m zárt volt, a
+keresőfa m-ből induló részének csomópontjaiban az útköltség-et
+frissíteni kell, ami problémát okoz:<br/>
+	–külön eljárást
+írunk a frissítésre;<br/>
+	–az A algoritmussal frissíttetjük a
+részgráfot;<br/>
+	–megelőzzük a probléma kialakulását.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">3.
+A tesztelést nem hozhatjuk előre.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font size="2" style="font-size: 11pt">1:procedure
+Kiterjeszt(</font></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font size="2" style="font-size: 11pt">〈</font></span></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font size="2" style="font-size: 11pt">A,kezdő,C,O</font></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font size="2" style="font-size: 11pt">〉</font></span></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font size="2" style="font-size: 11pt">,költség,
+h,csomópont,nyíltak,zártak)<br/>
+2:	for all o∈O do <br/>
+3:		if
+Előfeltétel(Állapot[csomópont],o)
+then<br/>
+4:			állapot←Alkalmaz(Állapot[csomópont],o)<br/>
+5:			ny←Keres(nyíltak,állapot)<br/>
+6:			z←Keres(zártak,állapot)<br/>
+7:			if
+ny=Nil and z=Nil
+then<br/>
+8:				Állapot[új-csomópont]←állapot<br/>
+9:				Szülő[új-csomópont]←csomópont<br/>
+10:				Operátor[új-csomópont]←o<br/>
+11:				Útköltség[új-csomópont]←Útköltség[csomópont]
++költség(o,Állapot[csomópont])<br/>
+12:				Heurisztika[új-csomópont]←h(állapot)<br/>
+13:				nyíltak←nyíltak∪{új-csomópont}<br/>
+14:			else<br/>
+15:				új-út-költség←Útköltség[csomópont]
++költség(o,Állapot[csomópont])<br/>
+</font><font size="2" style="font-size: 11pt">16:				if
+ny!=Nil then<br/>
+17:					if
+új-út-költség&lt;Útköltség[ny]then<br/>
+18:						Szülő[ny]←csomópont<br/>
+19:						Operátor[ny]←o<br/>
+20:						Útköltség[ny]←új-út-költség<br/>
+21:					end
+if<br/>
+22:				else<br/>
+23:					if új-út-költség&lt;Útköltség[z]
+then<br/>
+24:						Szülő[z]←csomópont<br/>
+25:						Operátor[z]←o<br/>
+26:						Útköltség[z]←új-út-költség<br/>
+27:						zártak←zártak\{z}<br/>
+28:						nyíltak←nyíltak∪{z}<br/>
+29:					end
+if<br/>
+30:				end if<br/>
+31:			end if<br/>
+32:		end if<br/>
+33:	end
+for<br/>
+34:	nyíltak←nyíltak\{csomópont}<br/>
+35:	zártak←zártak∪{csomópont}<br/>
+36:end
+procedure<br/>
+</font><font size="2" style="font-size: 11pt">37:procedure
+A-algoritmus(</font></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font size="2" style="font-size: 11pt">〈</font></span></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font size="2" style="font-size: 11pt">A,kezdő,C,O</font></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font size="2" style="font-size: 11pt">〉</font></span></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font size="2" style="font-size: 11pt">,költség,
+h)<br/>
+38:	Állapot[új-csomópont]←kezdő<br/>
+39:	Szülő[új-csomópont]←Nil<br/>
+40:	Operátor[új-csomópont]←∗<br/>
+41:	Útköltség[új-csomópont]←0<br/>
+42:	Heurisztika[új-csomópont]←h(kezdő)<br/>
+43:	nyíltak←{új-csomópont}<br/>
+44:	zártak←∅<br/>
+45:	while
+Igaz do<br/>
+46:		if nyíltak=∅ then<br/>
+47:			break<br/>
+48:		end
+if<br/>
+49:		csomópont←Választ({cs|cs∈nyíltak∧∀cs′(cs′∈nyíltak⊃(Útköltség[cs]+Heurisztika[cs])≤(Útköltség[cs′]+Heurisztika[cs′]))})<br/>
+50:		if
+Állapot[csomópont]∈C then<br/>
+51:			break<br/>
+52:		end
+if<br/>
+53:		Kiterjeszt(</font></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font size="2" style="font-size: 11pt">〈</font></span></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font size="2" style="font-size: 11pt">A,kezdő,C,O</font></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font size="2" style="font-size: 11pt">〉</font></span></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><font size="2" style="font-size: 11pt">,költség,
+h,csomópont,nyíltak,zártak)<br/>
+54:	end while<br/>
+55:	ifnyíltak!=∅
+then<br/>
+56:		Megoldás-Kiír(csomópont)<br/>
+57:	else<br/>
+58:		print
+„Nincs megoldás”<br/>
+59:	end if<br/>
+60:end procedure</font></font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Az
+A algoritmus értékelése<br/>
+Teljesség: A vezérlő,<br/>
+•ha
+van megoldás, tetszőleges reprezentációs gráfban véges sok
+keresőlépés után előállít egy megoldást,<br/>
+•ha nincs a
+problémának az adott reprezentációban megoldása, akkor véges
+gráf esetén azt a nyílt csomópontok elfogyásával felismeri.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Optimalitás:
+Nincs garancia az optimális megoldás előállítására. De ha
+minden a∈A esetén h(a)≤h∗(a), ahol h∗(a) az a állapotból
+célba jutás optimális költsége, akkor az A algoritmus az
+optimális megoldást állítja elő, ha van megoldás. Ez az A∗
+algoritmus.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Az
+A algoritmus a működése során egy csúcsot legföljebb véges
+sokszor terjeszt ki.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Az
+A algoritmus, hacsak közben nem fejezi be sikeresen a keresést,
+minden a nyíltak halmazába bekerülő csomópontot véges sok lépés
+után kiterjeszt</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Az
+A algoritmus véges reprezentációs gráfban véges sok lépés után
+befejezi a keresést.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Ha
+van megoldás, az A algoritmus adatbázisában a nyílt csomópontok
+között mindig van az optimális úton fekvő csúcs.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Tetszőleges
+reprezentációs gráf esetén, ha van megoldás, az A algoritmus
+véges sok lépésben megoldással fejezi be a keresést.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Az
+A∗ algoritmus által kiterjesztésre kiválasztott tetszőleges n
+csomópontra összköltség(n)≤összköltség∗(s).</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Legyen
+P és Q két A∗algoritmus! Azt mondjuk,hogy P jobban informált,
+mint Q, ha célállapotot tartalmazó csomópontok kivételével
+bármely n csomópontra heurisztika P(n)&gt;heurisztika Q(n)
+teljesül, ahol heurisztika P és heurisztika Q a P és Q
+algoritmusok heurisztikus függvényei. (Más szóval: a P algoritmus
+alulról pontosabban becsli a hátralévő út költségét bármely
+csúcsban.)</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Ha
+P jobban informált A∗ algoritmus Q-nál, akkor minden olyan
+csomópontot, amelyet P kiterjeszt, kiterjeszt Q is.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">A
+monoton A algoritmus</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Azt
+mondjuk, hogy egy h heurisztikus függvény kielégíti a monoton
+megszorítás feltételét, ha értéke bármely él mentén
+legföljebb az illető él költségével csökken, azaz minden (n,
+m)∈E él esetén h(n)−h(m)≤költség(n, m).</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Ha
+egy heurisztikus függvény kielégíti a monoton megszorítás
+feltételét, akkor h(n)≤h∗(n) teljesül minden n∈N-re.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Monoton
+A algoritmusnak nevezzük azt az A algoritmust, amelynek heurisztikus
+függvénye monoton megszorításos.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Amikor
+a monoton A algoritmus egy nyílt n csomópontot kiterjesztésre
+kiválaszt, akkor n-be már optimális utat talált, azaz
+útköltség(n) =útköltség∗(n).</font></font></p>
+<h2 class="western">Kétszemélyes játékok és reprezentálásuk. 
+</h2>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Stratégiai
+játékok azok a játékok, melyekben játékosoknak a játék
+kimenetelére (ellenőrizhető módon) van befolyásuk.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Egy
+játék leírásához meg kell adni<br/>
+•a játék lehetséges
+állásait (helyzeteit),<br/>
+•a játékosok számát,<br/>
+•hogyan
+következnek lépni az egyes játékosok (pl. egy időben vagy
+felváltva egymás után),<br/>
+•egy-egy állásban a játékosoknak
+milyen lehetséges lépései (lehetőségei) vannak,<br/>
+•a
+játékosok milyen – a játékkal kapcsolatos – információval
+rendelkeznek a játék folyamán,<br/>
+•van-e a véletlennek
+szerepe a játékban és hol,<br/>
+•milyen állásban kezdődik és
+mikor ér véget a játék,<br/>
+•és az egyes játékosok mikor,
+mennyit nyernek, illetve veszítenek.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Osztályozás<br/>
+•a
+játékosok száma szerint: pl. kétszemélyes játékok;<br/>
+•a
+játszma állásból állásba vivő lépések sorozata:diszkrét
+játékok;<br/>
+•az állásokban véges sok lehetséges lépése
+van minden játékosnak és a játszmák véges sok lépés után
+véget érnek:véges játékok;<br/>
+•a játékosok a játékkal
+kapcsolatos összes információval rendelkeznek a játék
+folyamán:teljes információjú játékok;<br/>
+•nincs a
+véletlennek szerepe a játékban:determinisztikus játékok;<br/>
+•a
+játékosok nyereségeinek és veszteségeinek összege 0:
+zérusösszegű játékok.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">A
+továbbiakban játék alatt kétszemélyes, diszkrét, véges, teljes
+információjú, determinisztikus, zérusösszegű stratégiai
+játékot fogunk érteni</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><b>játékok
+reprezentációja<br/>
+</b></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Jelölje
+a két játékost A és B, a játékállások halmazát H. A játékot
+az a</font></font><sub><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">0</font></font></sub><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">∈H
+kezdőállásban kezdje J</font></font><sub><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">0</font></font></sub><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">∈
+{A,B}. Tegyük fel, hogy a játékosok a játék során felváltva
+lépnek, és ismerjük az egyes állásokban megtehető
+lépéseket:{l|l:H→H}. Az l lépés egy a állásban akkor tehető
+meg, ha l-megtételének-előfeltétele(a). A játék az a állásban
+véget ér, ha végállás(a). A szabályok leírják, itt ki a nyerő
+játékos: nyer:{a|végállás(a)} → {jön</font></font><sub><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">a</font></font></sub><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">,
+volt</font></font><sub><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">a</font></font></sub><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">},
+ahol jön</font></font><sub><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">a
+</font></font></sub><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">lenne
+az a állásban soron következő játékos (jön</font></font><sub><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">a</font></font></sub><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">!</font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">=</font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">volt</font></font><sub><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">a</font></font></sub><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">).
+E játék állapottér-reprezentációja az az</font></font><font face="Noto Sans CJK SC"><font size="2" style="font-size: 10pt"><span lang="zh-CN"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">〈</font></font></span></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">A,kezdő,V,O</font></font><font face="Noto Sans CJK SC"><font size="2" style="font-size: 10pt"><span lang="zh-CN"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">〉</font></font></span></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">négyes,
+ahol</font></font></p>
+<p>•<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">A={(a,J)|a∈H,J∈{A,B},J
+következik lépni},<br/>
+•kezdő= (a</font></font><sub><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">0</font></font></sub><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">,J</font></font><sub><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">0</font></font></sub><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">)<br/>
+•V={(a,J)|végállás(a),J
+nyer, ha nyer(a) = jön</font></font><sub><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">a</font></font></sub><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">}<br/>
+•O={ol|ol(a,J)
+= (l(a),I),I,J∈{A,B},I6=J}</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">A
+játék állapottér-repezentációját szemléltető gráf a
+játékgráf. „Egyenesítsük ki” a játékgráfot fává. A
+játékfában<br/>
+•páros szinteken lévő állásokban a kezdő
+játékos, páratlan szinteken lévőkben pedig az ellenfele
+léphet;<br/>
+•egy állást annyi különböző csúcs szemléltet,
+ahány különböző módon a játék során a kezdőállásból
+eljuthatunk hozzá;<br/>
+•véges hosszúságúak az utak, hisz
+véges játékokkal foglalkozunk. Ha a játék során kezdő
+állapotból a játékosok valamelyik v∈ V állapotba érnek, azaz
+kezdő∗⇒<sub>(</sub><sub>o</sub><sub><span style="font-weight: normal">1</span></sub><sub>,...,or</sub><sub>)</sub>
+v(r≥1), azt mondjuk lejátszottak egy játszmát. A játszmákat a
+játékfában a startcsúcsból a levélelemekbe vezető utak
+szemléltetik. Egy játék játékfája a játék összes lehetséges
+játszmáját szemlélteti a startcsúcsból induló, a különböző
+levelekben végződő útjaival.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Az</font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN">〈</span></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">N,
+HE</font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN">〉</span></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">párt
+ÉS/VAGY gráfnak nevezzük:<br/>
+•N nemüres halmaz, a gráf
+csúcsainak halmaza,<br/>
+•HE⊆{(n, M)∈N×2N|06=|M|&lt;∞}pedig
+az irányított hiperélek halmaza.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Az
+ÉS/VAGY gráfban a gráf hiperéleinek egy olyan <br/>
+(n<sub>1</sub>,{n<sub>11</sub>,
+n<sub>12</sub>, . . . , n<sub>1k1</sub>}),<br/>
+(n<sub>2</sub>,{n<sub>21</sub>,
+n<sub>22</sub>, . . . , n<sub>2k2</sub>}),<br/>
+…<br/>
+(n<sub>r</sub>,{n<sub>r1</sub>,
+n<sub>r2</sub>, . . . , n<sub>rkr</sub>})<br/>
+sorozata, ahol
+∀i∀j(¬(i=j)⊃¬(n<sub>i</sub>=n<sub>j</sub>))∧∀i((i
+&gt;1)⊃∃j((i &gt; j)∧(n<sub>i</sub>∈{n<sub>j1</sub>, n<sub>j2</sub>,
+. . . , n<sub>jkj</sub>}))), a gráf egy hiperútja. Más szavakkal
+(az út definíciója alapján) a hiperút a hiperélek valamilyen
+sorozata, melyre 2 feltétel teljesül:<br/>
+- a kezdőcsúcsok mind
+különbözőek<br/>
+- elsőbeli élt kivéve minden hiperél
+kezdőcsúcsa megegyezik valamely őt megelőző hiperél
+végcsúcsával/befutó csúcsával</font></font></p>
+<h2 class="western">A nyerő stratégia. 
+</h2>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">A
+J játékos stratégiája egy olyan S<sub>J</sub>:{(a,J)|(a,J)∈A}→O
+döntési terv, amely J számára előírja, hogy a játék során
+előforduló azon állásokban, melyekben J következik lépni, a
+megtehető lépései közül melyiket lépje meg. </font></font>
+</p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">A
+J játékos stratégiáinak szemléltetése a játékfában<br/>
+Alakítsuk
+át a játékfát ÉS/VAGY fává J játékos szempontjából: J
+lépéseit szemléltető élek mindegyike egy élből álló hiperél
+marad (VAGY élek, ezek közül egyet fog választani), ellenfelének
+egy-egy állásból megtehető lépéseit szemléltető élköteg
+egy-egy hiperél lesz (ÉS élek, J-től független, bármelyiket
+választhatja az ellenfél, ezért mindet számításba kell venni).
+Ebben az ÉS/VAGY gráfban J stratégiáit a startcsúcsból kiinduló
+olyan hiperutak szemléltethetik, melyek levelei az eredeti
+játékgráfnak is levelei.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Tegyük
+fel, hogy a J játékos az S<sub>J</sub> stratégiájával játszik.
+Ekkor csak az S<sub>J</sub>-t szemléltető hiperutat alkotó
+közönséges utak által szemléltetett játszmák játszhatók le.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Tegyük
+fel, hogy az A játékos az S<sub>A</sub>, a B játékos pedig az S<sub>B
+</sub>stratégiájával játszik. A két stratégia egyértelműen
+meghatározza a lejátszható játszmát.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">A
+J játékos stratégiáját J nyerő stratégiájának nevezzük, ha
+(az ellenfelének stratégia-választásától függetlenül) minden
+a stratégia alkalmazása mellett lejátszható játszmában J nyer.
+A J szempontjából átalakított ÉS/VAGY fában a J nyerő
+stratégiát szemléltető hiperút levélelemei mind J-nyerőállások.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">(Az
+általunk vizsgált) minden játék esetén valamelyik (de nyilván
+csak az egyik) játékos számára van nyerő stratégia.</font></font></p>
+<h2 class="western">Lépésajánló algoritmusok.</h2>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><b>Minimax
+algoritmus<br/>
+</b>Cél: a támogatott játékosnak, J-nek, egy
+adott állásban „elég jó” lépést ajánlani. Az algoritmus
+számára át kell adni<br/>
+•a
+játék</font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN">〈</span></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">A,kezdő,V,O</font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN">〉</span></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">reprezentációját,<br/>
+•J
+azon a állását, ahol lépni következik,<br/>
+•az állások
+„jóságát” J szempontjából becslő h<sub>J</sub>:A→R
+heurisztikát<br/>
+•és egy mélységi korlátot, amely
+meghatározza, hogy meddig tekintünk előre a jövőben.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Az
+algoritmus fő lépései:<br/>
+1. A játékfa (a,J) állapotot
+szemléltető csúcsából kiinduló részének előállítása
+korlát mélységig.<br/>
+2. A részfa leveleiben található állások
+jóságainak becslése a heurisztika segítségével:
+jóság(n<sub>b</sub>)=h<sub>J</sub>(b). <br/>
+3. Szintenként
+csökkenő sorrendben a részfa nem levél csúcsai jóságainak
+számítása (nem heurisztika, hanem a minimax része): <br/>
+ha az n
+csúcs gyermekei rendre n<sub>1</sub>, . . . , n<sub>k</sub>, akkor
+<br/>
+jóság(n)⇋{	max{jóság(n<sub>1</sub>), . . . ,jóság(n<sub>k</sub>)},ha
+n szintje páros,<br/>
+		min{jóság(n<sub>1</sub>), . . .
+,jóság(n<sub>k</sub>)},ha n szintje páratlan.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Azaz
+ha a kezdő lép, a legértékesebb gyereket választ, ha az ellenfél
+lép, akkor a legrosszabb gyereket választ. (mivel valószínűleg
+az ellenfél a számunkra legkedvezőtlenebb lépést fogja
+választani)<br/>
+Javaslat: az a állásból egy olyan lépést
+tegyen meg J, amelyik az n<sub>a  </sub>csúcs „jóság”
+értékével megegyező értékű gyermekébe vezet.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Csökkenő
+szintsorrendben rendelünk heurisztikát attól függően, hogy az
+adott lépés gyermekéből milyen jóságértékű lépést tehet. </font></font>
+</p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Játékerőt
+a heurisztika és a korlát mélysége befolyásolja.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">1:function
+Minimax-lépés(</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〈</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">A,kezdő,V,O</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〉</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">,állapot,korlát,h<sub>J</sub>)<br/>
+2:	max←−∞<br/>
+3:	operátor←Nil<br/>
+4:	for
+all o∈O do<br/>
+5:		if Előfeltétel(állapot,o)
+then<br/>
+6:			új-állapot←Alkalmaz(állapot,
+o)<br/>
+7:			v←Minimax-Érték(</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〈</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">A,kezdő,V,O</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〉</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">,új-állapot,korlát−1,
+h)<br/>
+8:			if v &gt;max
+then<br/>
+9:				max←v<br/>
+10:				operátor←o<br/>
+11:			end
+if<br/>
+12:		end if<br/>
+13:	end for<br/>
+14:	return operátor<br/>
+15:end
+function<br/>
+16:function
+Minimax-Érték(</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〈</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">A,kezdő,V,O</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〉</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">,állapot,mélység,h<sub>J</sub>)<br/>
+17:	if
+állapot∈V or mélység= 0 then<br/>
+18:		return h<sub>J</sub>(állapot)
+<br/>
+19:	else if Játékos[állapot] =J then<br/>
+20:		max←−∞<br/>
+21:		for
+all o∈O do<br/>
+22:			if Előfeltétel(állapot,o)
+then<br/>
+23:				új-állapot←Alkalmaz(állapot,
+o)<br/>
+24:				v←Minimax-Érték(</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〈</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">A,kezdő,V,O</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〉</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">,új-állapot,mélység−1,
+h<sub>J</sub>)<br/>
+25:				if v &gt;max then<br/>
+26:					max←v<br/>
+27:				end
+if<br/>
+28:			end if<br/>
+29:		end for<br/>
+30:		return
+max<br/>
+31:	else<br/>
+32:		min←∞<br/>
+33:		for all o∈O
+do<br/>
+34:			if Előfeltétel(állapot,o)
+then<br/>
+35:				új-állapot←Alkalmaz(állapot,
+o)<br/>
+36:				v←Minimax-Érték(</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〈</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">A,kezdő,V,O</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〉</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">,új-állapot,mélység−1,
+h<sub>J</sub>)<br/>
+37:				if v &lt;min then<br/>
+38:					min←v<br/>
+39:				end
+if<br/>
+40:			end if<br/>
+41:		end for<br/>
+42:		return min<br/>
+43:	end
+if<br/>
+44:end function</font></font></p>
+<p><br/>
+<br/>
+
+</p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><b>Negamax
+algoritmus</b></font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Cél:
+a támogatott játékosnak, J-nek, egy adott állásban „elég
+jó”lépést ajánlani. Nem a támogatott játékos szempontjából
+értékel, hanem az éppen következő játékos szempontjából. Az
+algoritmus számára át kell adni<br/>
+•a
+játék</font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN">〈</span></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">A,kezdő,V,O</font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN">〉</span></font></font><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">reprezentációját,<br/>
+•J
+azon a állását, ahol lépni következik,<br/>
+•az állások
+„jóságát” a soron következő játékos szempontjából becslő
+h:A→R heurisztikát<br/>
+•és egy mélységi korlátot.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Az
+algoritmus fő lépései:<br/>
+1. A játékfa (a,J) állapotot
+szemléltető csúcsából kiinduló részének előállítása
+korlát mélységig.<br/>
+2. A részfa leveleiben található állások
+jóságainak becslése a heurisztika segítségével:
+jóság(n<sub>b</sub>)=h(b).<br/>
+3. Szintenként csökkenő
+sorrendben a részfa nem levél csúcsai jóságainak számítása:
+ha az n csúcs gyermekei rendre n<sub>1</sub>, . . . , n<sub>k</sub>,
+akkor <br/>
+jóság(n)⇋max{−jóság(n<sub>1</sub>), . . .
+,−jóság(n<sub>k</sub>)},</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Az
+előző szinten 9 értékű az aktuális szinten következő játékos
+szempontjából -9 értékű lépés lesz.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Javaslat:
+az a állásból egy olyan lépést tegyen meg J, amelyik az n<sub>a</sub>
+csúcs „jóság” értékének -1-szeresével megegyező értékű
+gyermekébe vezet.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Eredménye
+megegyezik a minimaxéval.</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">1:function
+Negamax-lépés(</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〈</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">A,kezdő,V,O</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〉</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">,állapot,korlát,h)<br/>
+2:	max←−∞<br/>
+3:	operátor←Nil<br/>
+4:	for
+all o∈O do<br/>
+5:		if Előfeltétel(állapot,o)
+then<br/>
+6:			új-állapot←Alkalmaz(állapot,
+o)<br/>
+7:			v←−Negamax-Érték(</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〈</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">A,kezdő,V,O</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〉</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">,új-állapot,korlát−1,
+h)<br/>
+8:			if v &gt;max
+then<br/>
+9:				max←v<br/>
+10:				operátor←o<br/>
+11:			end
+if<br/>
+12:		end if<br/>
+13:	end for<br/>
+14:	return operátor<br/>
+15:end
+function<br/>
+16:function
+Negamax-Érték(</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〈</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">A,kezdő,V,O</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〉</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">,állapot,mélység,h)<br/>
+17:	if
+állapot∈V or mélység= 0 then<br/>
+18:		return
+h(állapot)<br/>
+19:	else<br/>
+20:		max←−∞<br/>
+21:		for all
+o∈O do<br/>
+22:			if Előfeltétel(állapot,o)
+then<br/>
+23:				új-állapot←Alkalmaz(állapot,
+o)<br/>
+24:				v←−Negamax-Érték(</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〈</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">A,kezdő,V,O</font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt"><span lang="zh-CN">〉</span></font></font><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">,új-állapot,mélység−1,
+h)<br/>
+25:				if v &gt;max then<br/>
+26:					max←v<br/>
+27:				end
+if<br/>
+28:			end if<br/>
+29:		end for<br/>
+30:		return max<br/>
+31:	end
+if<br/>
+32:end function</font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><b>Alfa-béta
+vágás</b></font></font></p>
+<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">A
+állásoknál alsó alfa, B-knél felső béta korlát van. Csak a
+legdominánsabb játékfa részletet kell előállítani. Amiket a
+korlát nem befolyásol, nem kell előállítani.</span></font></font></p>
+<p style="font-weight: normal"><img src="4_vizualis_matek_mestint_algoritmusok_html_61afccd23ffe998d.jpg" name="Image1" align="left" width="538" height="242" border="0"/>
+<br/>
+<br/>
+
+</p>
+</body>
+</html>
